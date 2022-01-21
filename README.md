@@ -4,7 +4,9 @@
 
 **Create account on Hyper-V that matches your client machine!!**
 
-### Hyper-V Server 2019 (Server 2 - Child):
+A succesffuly connection requires you to configure both your **Server (Hyperv-Child - Server 2019 Guest)** and the **Client (Host Machine - Azure Labs)**. The steps for each are outlined below.
+
+### Hyper-V Server 2019 (HYPERV-CHILD):
 
 Set the server's hostname
 - Launch Powershell via cmd.exe
@@ -13,9 +15,9 @@ Set the server's hostname
   - `Enable-PSRemoting`
   - `Enable-WSManCredSSP -Role server`
 
-### Host Machine (Server 1 - Host):
+### Host Machine - Azure Labs Windows 10 (Host):
 
-- If not already installed, Install HyperV Manager (only the manager!) using Powershell:
+- If not already installed, Install HyperV Manager using Powershell:
 win+x>Programs And Features>Turn Windows Features On or Off>Hyper-V>Hyper-V Management Tools
   - Or via Powershell `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All`
 - Add your Hyper-V server to the hosts file via Powershell as admin
@@ -23,10 +25,10 @@ win+x>Programs And Features>Turn Windows Features On or Off>Hyper-V>Hyper-V Mana
   - OR via notepad.exe as admin
   - edit `C:\Windows\System32\drivers\etc\hosts`  (note it has no extension so make sure you view all file types)
   - Add your server IP and hostname to the bottom of the file:
-  - i.e. "192.168.0.101   MATTHYPERV"
+  - i.e. "192.168.0.101   HYPERV-CHILD"
  - Add your Hyper-V server to TrustedHosts and allow authentication
-   - via Powershell as admin (replace "fqdn-of-hyper-v-host" your  server's hostname i.e. HYPERVMATT) 
-   - `Enable-PSRemoting`
+   - via Powershell as admin (replace "fqdn-of-hyper-v-host" your  server's hostname i.e. HYPERV-CHILD) 
+   - `Enable-PSRemoting` (safe to ignore Firewall errors)
    - `Set-Item WSMan:\localhost\Client\TrustedHosts -Value "fqdn-of-hyper-v-host"`
    - `Enable-WSManCredSSP -Role client -DelegateComputer "fqdn-of-hyper-v-host"`
 ### Connect to Server
@@ -34,8 +36,4 @@ win+x>Programs And Features>Turn Windows Features On or Off>Hyper-V>Hyper-V Mana
  - Choose other and enter the hostname of your Hyper-V server (i.e. HYPERVMATT).
  - If you connect successfully, you'll see menu options populate on the right
  - You may still see an access denied message in the list, this will require additional troubleshooting
-D - ouble click the VM to open. If you encounter a CredSSP issue, run the .reg file provided below.
-
-What to submit:
-
-Nothing. This will be verified in class :-)
+ - Double click the VM to open. If you encounter a CredSSP issue, run the .reg file provided below.
