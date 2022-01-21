@@ -13,11 +13,11 @@ Set the server's hostname
   - `Enable-PSRemoting`
   - `Enable-WSManCredSSP -Role server`
 
-Client Machine (Windows Server 2019 Host):
+### Host Machine (Server 1 - Host):
 
-If not already installed, Install HyperV Manager (only the manager!) using Powershell:
+- If not already installed, Install HyperV Manager (only the manager!) using Powershell:
 win+x>Programs And Features>Turn Windows Features On or Off>Hyper-V>Hyper-V Management Tools
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+  - Or via Powershell `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All`
 Add your Hyper-V server to the hosts file
 via Powershell as admin
 Add-Content -Path C:\Windows\System32\drivers\etc\hosts -Value "`n192.168.0.101 `HYPERVMATT"
