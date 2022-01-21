@@ -19,7 +19,7 @@ Set the server's hostname
 win+x>Programs And Features>Turn Windows Features On or Off>Hyper-V>Hyper-V Management Tools
   - Or via Powershell `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All`
 - Add your Hyper-V server to the hosts file via Powershell as admin
-  - `Add-Content -Path C:\Windows\System32\drivers\etc\hosts -Value "`n192.168.0.101 `HYPERVMATT"`
+  - ```Add-Content -Path C:\Windows\System32\drivers\etc\hosts -Value "`n192.168.0.101 `HYPERVMATT"```
   - OR via notepad.exe as admin
   - edit `C:\Windows\System32\drivers\etc\hosts`  (note it has no extension so make sure you view all file types)
   - Add your server IP and hostname to the bottom of the file:
