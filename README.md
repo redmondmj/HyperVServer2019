@@ -32,8 +32,8 @@ win+x>Programs And Features>Turn Windows Features On or Off>Hyper-V>Hyper-V Mana
    - `Set-Item WSMan:\localhost\Client\TrustedHosts -Value "fqdn-of-hyper-v-host"`
    - `Enable-WSManCredSSP -Role client -DelegateComputer "fqdn-of-hyper-v-host"`
 ### Connect to Server
- - Launch Hyper-V manager (make sure you're logged in to the account that matches the server)
- - Choose other and enter the hostname of your Hyper-V server (i.e. HYPERVMATT).
+ - Launch **Hyper-V manager** (make sure you're logged in to the account that matches the server)
+ - Select or right click "Hyper-V Manager">Action>**Connect to Server**
+ - Choose other and enter the **hostname** of your Hyper-V server (i.e. HYPERV-CHILD)
  - If you connect successfully, you'll see menu options populate on the right
- - You may still see an access denied message in the list, this will require additional troubleshooting
- - Double click the VM to open. If you encounter a CredSSP issue, run the .reg file provided below.
+ - If you encounter a CredSSP issue, run the .reg file provided
