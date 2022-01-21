@@ -1,4 +1,4 @@
-# HyperVServer2019 - Client Configuration
+# HyperV Manager Client/Server Configuration
 
 ## The Trick:
 
