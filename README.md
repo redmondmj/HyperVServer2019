@@ -2,7 +2,7 @@
 
 ## The Trick:
 
-**Create account on Hyper-V that matches your client machine (itstudent & It$tudent5)**
+**Create account on Hyper-V that matches your client machine!!**
 
 ### Hyper-V Server 2019 (Server 2 - Child):
 
