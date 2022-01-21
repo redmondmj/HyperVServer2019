@@ -7,8 +7,8 @@ There are a couple techniques you can use to gain access to the file system.
 ## Allow Remote Connections to Shared Folders
 
 - Connect to HyperV Server 2019 (HYPERV-CHILD) via HyperV Manager
-- Open the command prompt or Powershell
-- run `netsh advfirewall firewall set rule group=”File and Printer Sharing” new enable=Yes`
+- Open the command prompt or Powershell and run
+- `netsh advfirewall firewall set rule group=”File and Printer Sharing” new enable=Yes`
 - This will allow access to thew default share of the system volume - C:
 
 - On your host machine (Azure Labs Machine) click start, type `run` and hit enter
