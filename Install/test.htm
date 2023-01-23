@@ -1,0 +1,985 @@
+<section class="closer" epub:type="division" data-cgi="KRUF9B7NX5SWB9FQU984" id="KRUF9B7NX5SWB9FQU984" role="region" aria-labelledby="YPQP67HRSN1MG1M4S160"><span class="filenum" id="filenum72"></span><header><h2 epub:type="title" data-cgi="YPQP67HRSN1MG1M4S160" id="YPQP67HRSN1MG1M4S160">Hands-On Projects</h2>
+                  
+</header><span aria-label="page 135" class="pagenumber rs_skip" data-after="135" epub:type="pagebreak" id="page-135" role="doc-pagebreak" title="Textbook page 135"></span><p data-cgi="SKTG28VVCJ36KNR3U208" id="SKTG28VVCJ36KNR3U208">These Hands-On Projects should be completed in the order given and should take a total of three hours to complete. The requirements for these projects include:
+</p><ul class="unordered list" epub:type="list" data-cgi="JLAZ5S3E06WG5CDRP540" id="JLAZ5S3E06WG5CDRP540">
+      <li class="item" epub:type="list-item" data-cgi="NKWYGNGH56NATB8FF171" id="NKWYGNGH56NATB8FF171">
+         <p data-cgi="ZBUU78ERKEKZCPASH351" id="ZBUU78ERKEKZCPASH351">A system with Windows Server 2019 installed according to <span class="xref">Hands-On Project 1-1</span> (Lab Environment 1) or <span class="xref">Hands-On Project 1-2</span> (Lab Environment 2).</p>
+      </li>
+   </ul><div class="activities" data-cgi="WZAQM2P7J9WSZP19R426" id="WZAQM2P7J9WSZP19R426">
+   <header><h3 epub:type="title" data-cgi="PBEVFZP1WZTZHDCNN444" id="PBEVFZP1WZTZHDCNN444"><span class="label">Project  <span class="ordinal">2-1</span>
+       </span>Server Manager</h3>
+      
+      
+   </header>
+   <p data-cgi="RTLTGH60ALS7PL2A1623" id="RTLTGH60ALS7PL2A1623">In this Hands-On Project, you explore the different configuration and management features of Server Manager.
+</p><div class="procedure" data-cgi="BCXYWA9TKJPFKTRYA785" id="BCXYWA9TKJPFKTRYA785">
+         <div class="steps" data-cgi="HSWXKJXV4WRZU5VKM801" id="HSWXKJXV4WRZU5VKM801">
+            <div class="step" data-cgi="WLTTGZRCX8KH5CWEW626" id="WLTTGZRCX8KH5CWEW626">
+               <header><h4 epub:type="title" id="d37749e16372"><span class="label">
+                      <span class="ordinal">1</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="ELLT8X480JBU8B1XD591" id="ELLT8X480JBU8B1XD591">Boot your Windows Server 2019 host and log into the system as Administrator using the password <b>Secret555</b>. After a few moments, Server Manager will open. If prompted to try the Windows Admin Center, select <b>Don’t show this message again</b> and close the information window.</p>
+            </div>
+            <div class="step" data-cgi="ZPQESZYL7YG8SZWZZ744" id="ZPQESZYL7YG8SZWZZ744">
+               <header><h4 epub:type="title" id="d37749e16393"><span class="label">
+                      <span class="ordinal">2</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="NPMX0MAP7TF09YR6Q312" id="NPMX0MAP7TF09YR6Q312">Within the Server Manager Dashboard, observe the roles and server groups shown. Note that your server is represented by Local Server, a member of the All Servers group and has the File and Storage Services role installed. Also note whether there are any services that are flagged red. If this is the case, click <b>Services</b> under your Local Server and note the services that are not started and the reason why.
+</p><aside class="dependent narrative fixed" epub:type="sidebar" data-cgi="QHVE2M6S2V4CNNCB4704" id="QHVE2M6S2V4CNNCB4704" aria-labelledby="QNMHL33430NEJ3KXV744">
+                     <header><h5 data-cgi="QNMHL33430NEJ3KXV744" id="QNMHL33430NEJ3KXV744"><span class="label">Note <img alt="&nbsp;" class="inlinegraphic" src="../graphics/note-t2.png" height="24" width="21" data-cgi="VLQQASK4NXPDN3AVB637">
+                              
+                           
+                        </span></h5></header>
+                     
+                     <p data-cgi="ZWXQWCR6P8U28B9TQ041" id="ZWXQWCR6P8U28B9TQ041">Many services within Windows Server 2019 are set to Delayed Start, so that they start several minutes following a Windows Server 2019 boot. If you see red flagged services that are listed as Delayed Start, click the Refresh icon in the upper corner of the Server Manager console after a few minutes, and the red flags should disappear.</p>
+                  </aside>
+            </div>
+            <div class="step" data-cgi="RREB2QBSKLHZMVQDA570" id="RREB2QBSKLHZMVQDA570">
+               <header><h4 epub:type="title" id="d37749e16424"><span class="label">
+                      <span class="ordinal">3</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="LHBN2CYFCDHYLJKYZ261" id="LHBN2CYFCDHYLJKYZ261">Highlight <b>Local Server</b> in the navigation pane of Server Manager.
+</p><ol class="lower-alpha list" epub:type="list" data-cgi="JUPJTQ1K14BRJ48MB205" id="JUPJTQ1K14BRJ48MB205">
+                     <li class="item" epub:type="list-item" data-cgi="HUFNCD8NCBVZD54WJ055" id="HUFNCD8NCBVZD54WJ055">
+                        <p data-cgi="PBFLDSHHM8TN6AN9G937" id="PBFLDSHHM8TN6AN9G937">Observe the default events shown in the Events pane. Next, click <b>Tasks, Configure Event Data</b> within the Events pane. At the Configure Event Data window, select <b>Informational</b> and click <b>OK</b>. Note the additional events that are now shown within the Events pane.</p>
+                     </li>
+                     <li class="item" epub:type="list-item" data-cgi="ZNVJZ4NMZ26HHCU3M078" id="ZNVJZ4NMZ26HHCU3M078">
+                        <p data-cgi="SCTYPW5FSE75E4859033" id="SCTYPW5FSE75E4859033">In the Performance pane, click <b>Tasks, Configure Performance Alerts</b>. Note the default alert thresholds and graph display period and click <b>Cancel</b>.</p>
+                     </li>
+                     <li class="item" epub:type="list-item" data-cgi="VDVA4Y0B8WJ2WX5RB374" id="VDVA4Y0B8WJ2WX5RB374">
+                        <p data-cgi="PMSDP5TUD3ZTM0KRC953" id="PMSDP5TUD3ZTM0KRC953">In the Roles and Features pane, click <b>Tasks, Add Roles and Features</b>.
+</p><ol class="lower-roman list" epub:type="list" data-cgi="HLRMU0KTSKRQ55QNJ308" id="HLRMU0KTSKRQ55QNJ308">
+                              <li class="item" epub:type="list-item" data-cgi="WDQKK97ZNVJ9SUX40177" id="WDQKK97ZNVJ9SUX40177">
+                                 <p data-cgi="XCSD7XK22XJ09SGNM394" id="XCSD7XK22XJ09SGNM394">At the Before you begin page, select the <b>Skip this page by default</b> checkbox, and click <b>Next</b>.</p>
+                              </li>
+                              <li class="item" epub:type="list-item" data-cgi="SEWM9MPCSQJ2CGXAH969" id="SEWM9MPCSQJ2CGXAH969">
+                                 <p data-cgi="WSTA6KEXYCLSYHE31934" id="WSTA6KEXYCLSYHE31934">At the Select installation type page, click <b>Next</b>.</p>
+                              </li>
+                              <li class="item" epub:type="list-item" data-cgi="ALXSPX4E0LBN8QGV2272" id="ALXSPX4E0LBN8QGV2272">
+                                 <p data-cgi="GPJE7DWJ0WNKSBMH0728" id="GPJE7DWJ0WNKSBMH0728">At the Select destination server page, click <b>Next</b>.</p>
+                              </li>
+
+                              <li class="item" epub:type="list-item" data-cgi="LPNP4VPLZG8GKG477183" id="LPNP4VPLZG8GKG477183">
+                                 
+                                 <p data-cgi="FFWY23FV8PHM2EPAQ478" id="FFWY23FV8PHM2EPAQ478">At the Select server roles page, select <b>DHCP Server</b>, and click <b>Add Features</b> when prompted. If prompted to continue after validation errors (because your system has a DHCP-assigned IP address), click <b>Continue</b>. Click <b>Next</b> when finished.</p>
+                              </li>
+                              <li class="item" epub:type="list-item" data-cgi="VQVHV8FGHZU8LABWX834" id="VQVHV8FGHZU8LABWX834">
+                                 <p data-cgi="ZYCCVA6K5MLWP6MBV665" id="ZYCCVA6K5MLWP6MBV665">At the Select features page, select <b>Telnet Client</b> and click <b>Next</b>.</p>
+                              </li>
+                              <li class="item" epub:type="list-item" data-cgi="RZTPB2V48Q9UFQ24N165" id="RZTPB2V48Q9UFQ24N165">
+                                 <p data-cgi="XBRL7BXPQ6DJ6RXTK332" id="XBRL7BXPQ6DJ6RXTK332">At the DHCP Server page, read the information regarding best practices and click <b>Next</b>.</p>
+                              </li>
+                              <li class="item" epub:type="list-item" data-cgi="SYLLP1MQ1D8FPSV34148" id="SYLLP1MQ1D8FPSV34148">
+                                 <p data-cgi="DYMBGVLC5M6YYLBXE055" id="DYMBGVLC5M6YYLBXE055">Click <b>Install</b> to install the DHCP Server role and Telnet Client feature.</p>
+                              </li>
+                              <li class="item" epub:type="list-item" data-cgi="ZPCNYJCNTCSJW41N9508" id="ZPCNYJCNTCSJW41N9508">
+                                 <p data-cgi="CFZVJWJQ8TU1PNVS9972" id="CFZVJWJQ8TU1PNVS9972">After the installation has completed, click <b>Complete DHCP configuration</b>, click <b>Commit</b>, and then click <b>Close</b>.</p>
+                              </li>
+                              <li class="item" epub:type="list-item" data-cgi="CJUU3YSZTD21VLHFJ824" id="CJUU3YSZTD21VLHFJ824">
+                                 <p data-cgi="KUXK9CXKJLPSSSKV8430" id="KUXK9CXKJLPSSSKV8430">Click <b>Close</b> to close the Add Roles and Features Wizard.</p>
+                              </li>
+                           </ol>
+                     </li>
+                  </ol>
+            </div><span aria-label="page 136" class="pagenumber rs_skip" data-after="136" epub:type="pagebreak" id="page-136" role="doc-pagebreak" title="Textbook page 136"></span>
+            <div class="step" data-cgi="KDCNSE3FJM0PHNM17671" id="KDCNSE3FJM0PHNM17671">
+               <header><h4 epub:type="title" id="d37749e16587"><span class="label">
+                      <span class="ordinal">4</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="UGFM7K3MQVUC07XCE366" id="UGFM7K3MQVUC07XCE366">Highlight <b>DHCP</b> in the navigation pane of Server Manager.
+</p><ol class="lower-alpha list" epub:type="list" data-cgi="SXZHRNM2RKKV1QDM2105" id="SXZHRNM2RKKV1QDM2105">
+                     <li class="item" epub:type="list-item" data-cgi="WWDXQDCUN370JV1G3499" id="WWDXQDCUN370JV1G3499">
+                        <p data-cgi="YPSSLW0UB7VZP0NZN500" id="YPSSLW0UB7VZP0NZN500">In the Best Practices Analyzer pane, click <b>Tasks, Start BPA Scan</b>, and then click <b>Start Scan</b>. Note the Warning and Error that you receive.</p>
+                     </li>
+                     <li class="item" epub:type="list-item" data-cgi="XXRXFNYU7C3GT063T695" id="XXRXFNYU7C3GT063T695">
+                        <p data-cgi="SZWK78QRJBU2JXMTW282" id="SZWK78QRJBU2JXMTW282">In the Services pane, right-click the <b>DHCP Server</b> service and click <b>Stop Services</b>.</p>
+                     </li>
+                  </ol>
+            </div>
+            <div class="step" data-cgi="UUFHFG6HGCNSWCBRS554" id="UUFHFG6HGCNSWCBRS554">
+               <header><h4 epub:type="title" id="d37749e16631"><span class="label">
+                      <span class="ordinal">5</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="TNPLNY1S8CF1T1ZEZ739" id="TNPLNY1S8CF1T1ZEZ739">Click <b>Dashboard</b> in the navigation pane of Server Manager. Note that there is one service and one BPA result red flagged for the DHCP, Local Server and All Servers groups.
+</p><ol class="lower-alpha list" epub:type="list" data-cgi="GELYPVW6DH56XZPTR686" id="GELYPVW6DH56XZPTR686">
+                     <li class="item" epub:type="list-item" data-cgi="DSHZQ4CVMWPB3WTG2456" id="DSHZQ4CVMWPB3WTG2456">
+                        <p data-cgi="RHAUSFT5TTYEPFTPE195" id="RHAUSFT5TTYEPFTPE195">Click <b>Services</b> under Local Server and note that the DHCP Server service is stopped. Right click the <b>DHCP Server</b> service, click <b>Start Services,</b> and then click <b>OK</b>. Click the <b>Refresh</b> button in the upper right of Server Manager and note that the service-related red flag disappears.</p>
+                     </li>
+                     <li class="item" epub:type="list-item" data-cgi="TBFD16WKMPYX1DGLK022" id="TBFD16WKMPYX1DGLK022">
+                        <p data-cgi="CPMHDVFPCQJ7KU0TQ978" id="CPMHDVFPCQJ7KU0TQ978">Click <b>BPA results</b> under Local Server and note the Predeployment error shown. Right click the error, click <b>Exclude Result,</b> and then click <b>OK</b>. Click the <b>Refresh</b> button in the upper right of Server Manager and note that the BPA-related red flag disappears.</p>
+                     </li>
+                  </ol>
+            </div>
+            <div class="step" data-cgi="SYVB7GVB1V0U05EVR523" id="SYVB7GVB1V0U05EVR523">
+               <header><h4 epub:type="title" id="d37749e16691"><span class="label">
+                      <span class="ordinal">6</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="YXVBQ2RQTF1GEJTQ6217" id="YXVBQ2RQTF1GEJTQ6217">In the upper right of Server Manager, click <b>Manage</b>, <b>Add Servers</b>. Note that you can add servers within your Active Directory domain, by DNS name, or import them from a file. Because your computer is not domain-joined, you do not see entries under the Active Directory tab. Click <b>Cancel</b>.</p>
+            </div>
+            <div class="step" data-cgi="DJQCL2TQWGHBF6L0T785" id="DJQCL2TQWGHBF6L0T785">
+               <header><h4 epub:type="title" id="d37749e16715"><span class="label">
+                      <span class="ordinal">7</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="BYQR32A1XWTDQUT3Z363" id="BYQR32A1XWTDQUT3Z363">In the upper right of Server Manager, click <b>Manage</b>, <b>Create Server Group</b>. In the Create Server Group window, specify a name of <b>Building1</b> in the Server group name box. Next, highlight <b>SERVER<i>X</i>
+                  </b> in the Server Pool tab, click the arrow button to move it to the Selected pane, and click <b>OK</b>. Note that your new server group appears within the navigation pane.</p>
+            </div>
+            <div class="step" data-cgi="MZARHYJPRKJXTPK5A257" id="MZARHYJPRKJXTPK5A257">
+               <header><h4 epub:type="title" id="d37749e16748"><span class="label">
+                      <span class="ordinal">8</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="MTBHTB96661PNNVUG659" id="MTBHTB96661PNNVUG659">Highlight <b>Building1</b> in the navigation pane of Server Manager. Right-click <b>SERVER<i>X</i>
+                  </b> in the Servers pane and note the options available on the menu. Select the <b>Windows PowerShell</b> option to open a Windows PowerShell console as Administrator. Close the Windows PowerShell console when finished.</p>
+            </div>
+            <div class="step" data-cgi="WXZQL3N327NFD61B4579" id="WXZQL3N327NFD61B4579">
+               <header><h4 epub:type="title" id="d37749e16775"><span class="label">
+                      <span class="ordinal">9</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="KHFKQU1590NFT7YEU758" id="KHFKQU1590NFT7YEU758">In the upper right of Server Manager, click <b>Tools</b> and note the tools that are available. Next, click <b>Manage, Server Manager Properties</b>. In the Server Manager Properties window, select <b>Do not start Server Manager automatically at logon</b> and click <b>OK</b>.</p>
+            </div>
+            <div class="step" data-cgi="VBMQHWAWURSBP8LVC277" id="VBMQHWAWURSBP8LVC277">
+               <header><h4 epub:type="title" id="d37749e16802"><span class="label">
+                      <span class="ordinal">10</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="WJLS2URXWC0MMBQH4484" id="WJLS2URXWC0MMBQH4484">Close the Server Manager window.</p>
+            </div>
+         </div>
+      </div>
+</div><span aria-label="page 137" class="pagenumber rs_skip" data-after="137" epub:type="pagebreak" id="page-137" role="doc-pagebreak" title="Textbook page 137"></span><div class="activities" data-cgi="JZHRVMCQ3U0APBB6H671" id="JZHRVMCQ3U0APBB6H671">
+   <header><h3 epub:type="title" data-cgi="TFRR6K3UB9E6G2E3Q876" id="TFRR6K3UB9E6G2E3Q876"><span class="label">Project  <span class="ordinal">2-2</span>
+       </span>Windows Admin Center</h3>
+      
+      
+   </header>
+   <p data-cgi="YHJYWTB9TQ7QA3NN8526" id="YHJYWTB9TQ7QA3NN8526">In this Hands-On Project, you install and explore the different configuration and management features of the Windows Admin Center.
+</p><div class="procedure" data-cgi="MPJKTTLT99LA9C3HB857" id="MPJKTTLT99LA9C3HB857">
+         <div class="steps" data-cgi="VDBB7U8JTJSVTB4D3874" id="VDBB7U8JTJSVTB4D3874">
+            <div class="step" data-cgi="UGMJYDHUMBNCXBYA6322" id="UGMJYDHUMBNCXBYA6322">
+               <header><h4 epub:type="title" id="d37749e16838"><span class="label">
+                      <span class="ordinal">1</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="WQHQSF033XJYDLA6F753" id="WQHQSF033XJYDLA6F753">On your Windows Server 2019 host, open the Google Chrome Web browser and navigate to <a class=" uri" target="_blank" href="https://aka.ms/WindowsAdminCenter">https://aka.ms/WindowsAdminCenter</a>. Follow the prompts to download the latest non-preview version of the Windows Admin Center. When finished, the downloaded file will automatically be opened to start the installation.
+</p><ol class="lower-alpha list" epub:type="list" data-cgi="EZFKKSGPBNHLB73M5857" id="EZFKKSGPBNHLB73M5857">
+                     <li class="item" epub:type="list-item" data-cgi="WRWBH3J0UZ30B4J2G649" id="WRWBH3J0UZ30B4J2G649">
+                        <p data-cgi="HLDU8GMUFUJ8ULBFW084" id="HLDU8GMUFUJ8ULBFW084">At the Windows Admin Center Setup screen, select <b>I accept the terms in the License Agreement</b> and click <b>Next</b>.</p>
+                     </li>
+                     <li class="item" epub:type="list-item" data-cgi="QXXCTGL2JMX97P338358" id="QXXCTGL2JMX97P338358">
+                        <p data-cgi="BQSQZ6MCG0X3MWM07871" id="BQSQZ6MCG0X3MWM07871">At the Use Microsoft Update page, click <b>Next</b>.</p>
+                     </li>
+                     <li class="item" epub:type="list-item" data-cgi="QGEFPTYDFMST5FFT5718" id="QGEFPTYDFMST5FFT5718">
+                        <p data-cgi="WLZVZWRTGNH9VE2JB050" id="WLZVZWRTGNH9VE2JB050">At the Install Windows Admin Center on Windows Server page, click <b>Next</b>.</p>
+                     </li>
+                     <li class="item" epub:type="list-item" data-cgi="ZNRJS3J5HJN3TTL7X248" id="ZNRJS3J5HJN3TTL7X248">
+                        <p data-cgi="KTNNX9VSSYVAW5YA1721" id="KTNNX9VSSYVAW5YA1721">At the Installing Windows Admin Center page, click <b>Next</b>. Note that the installation program will generate a self-signed encryption certificate for use on port 443 (HTTPS) and click <b>Install</b>.</p>
+                     </li>
+                     <li class="item" epub:type="list-item" data-cgi="TDXWBCS4SZK4A2Y3Y678" id="TDXWBCS4SZK4A2Y3Y678">
+                        <p data-cgi="DLRNPXG7EPTYQ3WRZ101" id="DLRNPXG7EPTYQ3WRZ101">Click <b>Finish</b>.</p>
+                     </li>
+                  </ol>
+            </div>
+            <div class="step" data-cgi="UMBL7LAAVWGKEWQW1790" id="UMBL7LAAVWGKEWQW1790">
+               <header><h4 epub:type="title" id="d37749e16909"><span class="label">
+                      <span class="ordinal">2</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="YXMX8KEQN6GEUUY1S485" id="YXMX8KEQN6GEUUY1S485">Navigate to <span class="monofont">https://SERVER<i>X</i>:443</span> within the Chrome Web browser and click <b>Skip tour</b> when prompted. Maximize your Chrome Web browser screen.</p>
+            </div>
+            <div class="step" data-cgi="QZXKUJM96TYUZLH23487" id="QZXKUJM96TYUZLH23487">
+               <header><h4 epub:type="title" id="d37749e16933"><span class="label">
+                      <span class="ordinal">3</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="YFGNH70Y32Z3168R1704" id="YFGNH70Y32Z3168R1704">At the All connections page, click <b>Add, Servers</b>. Note that you can add servers by server name or import a list of server names. Click <b>Cancel</b>.</p>
+            </div>
+            <div class="step" data-cgi="VLVTL4VNP1U0NKJAF848" id="VLVTL4VNP1U0NKJAF848">
+               <header><h4 epub:type="title" id="d37749e16954"><span class="label">
+                      <span class="ordinal">4</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="GJPAHT9R2FM5EAT9B450" id="GJPAHT9R2FM5EAT9B450">Highlight <b>server<i>x</i>
+                  </b> within the All connections page and click <b>Edit tags</b>. At the Edit connection tags window, type <b>2019HOST</b> and click <b>Save</b>.</p>
+            </div>
+            <div class="step" data-cgi="HXZUBCGCMP5EYUQDZ737" id="HXZUBCGCMP5EYUQDZ737">
+               <header><h4 epub:type="title" id="d37749e16984"><span class="label">
+                      <span class="ordinal">5</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="RNZMSXLRD1FA4QKHL622" id="RNZMSXLRD1FA4QKHL622">Highlight <b>server<i>x</i>
+                  </b> within the All Connections page and click <b>Connect</b>. Within the Overview tool, view the information shown and then click <b>Manage alerts</b>.
+</p><ol class="lower-alpha list" epub:type="list" data-cgi="QBDCN5J4XXZX7ULU6345" id="QBDCN5J4XXZX7ULU6345">
+                     <li class="item" epub:type="list-item" data-cgi="ZLVACHJ6DB68R2DJF084" id="ZLVACHJ6DB68R2DJF084">
+                        <p data-cgi="KNLVWJVE9AB5GNG8E604" id="KNLVWJVE9AB5GNG8E604">Select <b>Environment variables</b> and note that you can create and edit system and user environment variables.</p>
+                     </li>
+                     <li class="item" epub:type="list-item" data-cgi="JHTH0GR104PUMW6MA301" id="JHTH0GR104PUMW6MA301">
+                        <p data-cgi="KDAC2HB4BN3D770U5637" id="KDAC2HB4BN3D770U5637">Select <b>Power configuration</b>, select the <b>High performance</b> power plan and click <b>Save</b>.</p>
+                     </li>
+                  </ol>
+            </div>
+            <div class="step" data-cgi="UJLMN8BA1XJY3MMK5283" id="UJLMN8BA1XJY3MMK5283">
+               <header><h4 epub:type="title" id="d37749e17038"><span class="label">
+                      <span class="ordinal">6</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="QEVW56Y4JSZBDXDLB862" id="QEVW56Y4JSZBDXDLB862">Highlight <b>Devices</b> within the Tools pane. Note that you can disable existing hardware devices or update their device drivers.</p>
+            </div>
+            <div class="step" data-cgi="WBVD8K2S108MVL701711" id="WBVD8K2S108MVL701711">
+               <header><h4 epub:type="title" id="d37749e17056"><span class="label">
+                      <span class="ordinal">7</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="NKEMF97ARRF07ZR4Y973" id="NKEMF97ARRF07ZR4Y973">Highlight <b>Network</b> within the Tools pane. Select your Ethernet adapter and click <b>Actions, Settings</b>. Note that you can configure IPv4 and IPv6 settings for your Ethernet adapter.</p>
+            </div>
+            <div class="step" data-cgi="AVVFBVBZSGQZNM5DW175" id="AVVFBVBZSGQZNM5DW175">
+               <header><h4 epub:type="title" id="d37749e17077"><span class="label">
+                      <span class="ordinal">8</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="ECVHZ13U4M8M2QV5R998" id="ECVHZ13U4M8M2QV5R998">Highlight <b>PowerShell</b> within the Tools pane to open a Windows PowerShell prompt. Type <b>exit</b> and press <b>Enter</b> to stop your Windows PowerShell session.</p>
+            </div>
+            <div class="step" data-cgi="TKUS0JXTC1UV4VEM5935" id="TKUS0JXTC1UV4VEM5935">
+               <header><h4 epub:type="title" id="d37749e17101"><span class="label">
+                      <span class="ordinal">9</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="EREC3ND6R3E73GR2B559" id="EREC3ND6R3E73GR2B559">Highlight <b>Registry</b> within the Tools pane. Expand <b>HKEY_CLASSES_ROOT</b> and highlight <b>.ac3</b>. Note that you can add, modify, and delete values.</p>
+            </div>
+            <div class="step" data-cgi="WGBMVKGS65CWAVYCF908" id="WGBMVKGS65CWAVYCF908">
+               <header><h4 epub:type="title" id="d37749e17125"><span class="label">
+                      <span class="ordinal">10</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="CHJEBRSCUG52JBPPW443" id="CHJEBRSCUG52JBPPW443">Highlight <b>Roles &amp; Features</b> within the Tools pane. Select <b>DHCP Server</b> and click <b>Remove</b>. Click <b>Yes</b> to remove the role.</p>
+            </div>
+            <div class="step" data-cgi="HEPQRX8X8W20FYAPV185" id="HEPQRX8X8W20FYAPV185">
+               <header><h4 epub:type="title" id="d37749e17152"><span class="label">
+                      <span class="ordinal">11</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="QBNWD9J2TYFUWLQMW365" id="QBNWD9J2TYFUWLQMW365">Optionally navigate to the other tools within the Windows Admin Center and note their functionality. Close Google Chrome when finished.</p>
+            </div>
+         </div>
+      </div>
+</div><span aria-label="page 138" class="pagenumber rs_skip" data-after="138" epub:type="pagebreak" id="page-138" role="doc-pagebreak" title="Textbook page 138"></span><div class="activities" data-cgi="XSBQG25HP5L9MUS3R631" id="XSBQG25HP5L9MUS3R631">
+   <header><h3 epub:type="title" data-cgi="DLBZPS5HA39WF1MWT215" id="DLBZPS5HA39WF1MWT215"><span class="label">Project  <span class="ordinal">2-3</span>
+       </span>Configuration Utilities</h3>
+      
+      
+   </header>
+   <p data-cgi="BUPUJKRA0JNA4QYCW688" id="BUPUJKRA0JNA4QYCW688">In this Hands-On Project, you explore various Windows configuration utilities available within Windows Server 2019.
+</p><div class="procedure" data-cgi="FEQUHDQWAL1FSLRGS417" id="FEQUHDQWAL1FSLRGS417">
+         <div class="steps" data-cgi="KCJCCXAQCNU16BGPW663" id="KCJCCXAQCNU16BGPW663">
+            <div class="step" data-cgi="BQTQTL5P7YW1MZRGV690" id="BQTQTL5P7YW1MZRGV690">
+               <header><h4 epub:type="title" id="d37749e17188"><span class="label">
+                      <span class="ordinal">1</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="GTEASKLAXMGSFM26D207" id="GTEASKLAXMGSFM26D207">On your Windows Server 2019 host, click <b>Start</b> and then click <b>Control Panel</b>.</p>
+            </div>
+            <div class="step" data-cgi="TUCZ682BRWVSQ2H50845" id="TUCZ682BRWVSQ2H50845">
+               <header><h4 epub:type="title" id="d37749e17209"><span class="label">
+                      <span class="ordinal">2</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="DFPPXP9104F7N66LA213" id="DFPPXP9104F7N66LA213">Navigate to <b>System and Security</b>, <b>System</b>, <b>Advanced system settings</b>. Under the Performance section of the System Properties window, click <b>Settings</b>.
+</p><ol class="lower-alpha list" epub:type="list" data-cgi="LDAV9XK5LULVEGF27357" id="LDAV9XK5LULVEGF27357">
+                     <li class="item" epub:type="list-item" data-cgi="SJTGM3Q3LBKT05VNG258" id="SJTGM3Q3LBKT05VNG258">
+                        <p data-cgi="GLBCTTBD3UMTZS0B8116" id="GLBCTTBD3UMTZS0B8116">Next, highlight the <b>Advanced</b> tab and note the default setting for Processor scheduling.</p>
+                     </li>
+                     <li class="item" epub:type="list-item" data-cgi="HFCLRLM154F9GXKZQ708" id="HFCLRLM154F9GXKZQ708">
+                        <p data-cgi="ZWUD5CL20UGZVRS7D574" id="ZWUD5CL20UGZVRS7D574">Click <b>Change</b> and note the default size of the paging file that is currently allocated on your system. Because the paging file size is managed by the system by default, this value should be close to the recommended value shown.</p>
+                     </li>
+                     <li class="item" epub:type="list-item" data-cgi="WCQHCKQZJLE0G6F0W084" id="WCQHCKQZJLE0G6F0W084">
+                        <p data-cgi="QPNENLVGGALN7H3D7188" id="QPNENLVGGALN7H3D7188">Click <b>OK</b> to close the Virtual Memory window.</p>
+                     </li>
+                     <li class="item" epub:type="list-item" data-cgi="ANEPYVAVTVD4CRDS5715" id="ANEPYVAVTVD4CRDS5715">
+                        <p data-cgi="LSAJK4ZCQP5CV6EDN804" id="LSAJK4ZCQP5CV6EDN804">Highlight the <b>Data Execution Prevention</b> tab and note the default settings that apply DEP to all programs and services.</p>
+                     </li>
+                     <li class="item" epub:type="list-item" data-cgi="BNTJ23V5JSKP9QXRY408" id="BNTJ23V5JSKP9QXRY408">
+                        <p data-cgi="WTVSEJQVLS65P56HS203" id="WTVSEJQVLS65P56HS203">Click <b>OK</b> to close the Performance Options window.</p>
+                     </li>
+                  </ol>
+            </div>
+            <div class="step" data-cgi="BAQBZYT16GEN471DP652" id="BAQBZYT16GEN471DP652">
+               <header><h4 epub:type="title" id="d37749e17283"><span class="label">
+                      <span class="ordinal">3</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="QEQBTFDF13TR86KAM005" id="QEQBTFDF13TR86KAM005">Under the Startup and Recovery section of the System Properties window, click <b>Settings</b>. Note the default options and location of the dump file. Click <b>OK</b> to close the Startup and Recovery window when finished.</p>
+            </div>
+            <div class="step" data-cgi="TXPY4L53NEJK41CPW644" id="TXPY4L53NEJK41CPW644">
+               <header><h4 epub:type="title" id="d37749e17304"><span class="label">
+                      <span class="ordinal">4</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="MQWC2Z9LUG6UDCUQH067" id="MQWC2Z9LUG6UDCUQH067">At the bottom of the System Properties window, click <b>Environment Variables</b>.
+</p><ol class="lower-alpha list" epub:type="list" data-cgi="SCRPERD4ZCHDTFPU9458" id="SCRPERD4ZCHDTFPU9458">
+                     <li class="item" epub:type="list-item" data-cgi="YPYG9E1X5A7DVB6FW459" id="YPYG9E1X5A7DVB6FW459">
+                        <p data-cgi="KYPQYYDWP4MBPU660513" id="KYPQYYDWP4MBPU660513">In the User variables for Administrator section, click <b>New</b>.</p>
+                     </li>
+                     <li class="item" epub:type="list-item" data-cgi="TGEWYYHBV6SJSCAJS965" id="TGEWYYHBV6SJSCAJS965">
+                        <p data-cgi="BBAUB0ADB9640U24X137" id="BBAUB0ADB9640U24X137">At the New User Variable window, supply a Variable name of <span class="monofont">VAR1</span> and Variable value of <span class="monofont">Sample Variable</span> and click <b>OK</b>.</p>
+                     </li>
+                     <li class="item" epub:type="list-item" data-cgi="TVNXZH9V1U8SE74AN685" id="TVNXZH9V1U8SE74AN685">
+                        <p data-cgi="TLJM7S50EKDMPTT8C545" id="TLJM7S50EKDMPTT8C545">In the System variables section, note the values of the Path, TEMP, TMP, and windir variables and click <b>OK</b>.</p>
+                     </li>
+                  </ol>
+            </div>
+            <div class="step" data-cgi="ZKBLUXRAF0HAAPKTJ767" id="ZKBLUXRAF0HAAPKTJ767">
+               <header><h4 epub:type="title" id="d37749e17357"><span class="label">
+                      <span class="ordinal">5</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="TQCQFMUDJUGPZ0GYX432" id="TQCQFMUDJUGPZ0GYX432">In the System Properties window, highlight the <b>Hardware</b> tab and click <b>Device Manager</b>.
+</p><ol class="lower-alpha list" epub:type="list" data-cgi="JYZTF5QBLG93NAWB3427" id="JYZTF5QBLG93NAWB3427">
+                     <li class="item" epub:type="list-item" data-cgi="EGGA0PK438UUQY9SV832" id="EGGA0PK438UUQY9SV832">
+                        <p data-cgi="FDFSPR57V8X0KLTWS593" id="FDFSPR57V8X0KLTWS593">Devices that require attention will be marked with a yellow label and shown by default. If you see any Unknown devices, right-click the device, choose <b>Update driver</b> and follow the prompts to search for a driver on the Internet or from removable media supplied by your manufacturer.</p>
+                     </li>
+                     <li class="item" epub:type="list-item" data-cgi="MFPD327UKWFK4PWU2992" id="MFPD327UKWFK4PWU2992">
+                        <p data-cgi="ZMVVAQGY8M5EXN42L258" id="ZMVVAQGY8M5EXN42L258">Expand <b>Disk drives</b>, right-click your storage device, and click <b>Properties</b>. Highlight the <b>Policies</b> tab and note that write caching is enabled on the device by default but that flushing is not. Click <b>OK</b> to close the properties window.</p>
+                     </li>
+                     <li class="item" epub:type="list-item" data-cgi="YEAEZR7V98C17ELKY169" id="YEAEZR7V98C17ELKY169">
+                        <p data-cgi="EJZYYG01DJ5YVCUT4895" id="EJZYYG01DJ5YVCUT4895">Close Device Manager and click <b>OK</b> to close the System Properties window. If you are prompted to restart your computer to apply changes, click <b>Restart Later</b>.</p>
+                     </li>
+                  </ol>
+            </div>
+            <div class="step" data-cgi="BFUENRUH77NPH8KLZ992" id="BFUENRUH77NPH8KLZ992">
+               <header><h4 epub:type="title" id="d37749e17420"><span class="label">
+                      <span class="ordinal">6</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="WHETR45NN95J3YMSD171" id="WHETR45NN95J3YMSD171">In the Control Panel window, click <b>Control Panel</b> in the navigation bar to switch back to the Category view. Next, click <b>Add a device</b> under the Hardware category. Your system will search for devices that may not have been detected by PnP. Follow any prompts to install devices that are found. If no devices were found, click <b>Cancel</b>. Close Control Panel when finished.</p>
+            </div>
+            <span aria-label="page 139" class="pagenumber rs_skip" data-after="139" epub:type="pagebreak" id="page-139" role="doc-pagebreak" title="Textbook page 139"></span>
+            <div class="step" data-cgi="EWFP4Q8KMXDY3RPT1968" id="EWFP4Q8KMXDY3RPT1968">
+               <header><h4 epub:type="title" id="d37749e17446"><span class="label">
+                      <span class="ordinal">7</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="BWGUDENRB7JVW4P53418" id="BWGUDENRB7JVW4P53418">Navigate to <b>System and Security</b>, <b>Power Options</b>.
+</p><ol class="lower-alpha list" epub:type="list" data-cgi="ETFK2ZC32HBE9LW4M618" id="ETFK2ZC32HBE9LW4M618">
+                     <li class="item" epub:type="list-item" data-cgi="ZQFH8C0G3R7K6SP4B793" id="ZQFH8C0G3R7K6SP4B793">
+                        <p data-cgi="RDBNJLYQDGYWJXFJG655" id="RDBNJLYQDGYWJXFJG655">Select the <b>High performance</b> power plan.</p>
+                     </li>
+                     <li class="item" epub:type="list-item" data-cgi="BXLUZUTUT09J9ZPX1166" id="BXLUZUTUT09J9ZPX1166">
+                        <p data-cgi="MWGHNFTMDVQ8T9C9U017" id="MWGHNFTMDVQ8T9C9U017">Click <b>Change plan settings</b> and note the defaults.</p>
+                     </li>
+                     <li class="item" epub:type="list-item" data-cgi="PUTY5GMFURCVPCGJT328" id="PUTY5GMFURCVPCGJT328">
+                        <p data-cgi="JMKS07PAXJ6S229BM369" id="JMKS07PAXJ6S229BM369">Click <b>Change advanced power settings</b>. Navigate through the detailed power plan settings that are available for your computer, making changes that you desire as necessary. Click <b>OK</b> when finished.</p>
+                     </li>
+                     <li class="item" epub:type="list-item" data-cgi="CGFPRWQEQQ9ZBYLYF146" id="CGFPRWQEQQ9ZBYLYF146">
+                        <p data-cgi="MDZRVAMDAP5798BMP389" id="MDZRVAMDAP5798BMP389">If you made changes to your power plan, click <b>Save changes</b>, otherwise, click <b>Cancel</b>.</p>
+                     </li>
+                     <li class="item" epub:type="list-item" data-cgi="FQTWGWASWK2U7W8TU139" id="FQTWGWASWK2U7W8TU139">
+                        <p data-cgi="MWHZCP5RNFBTPKSME989" id="MWHZCP5RNFBTPKSME989">Close Control Panel.</p>
+                     </li>
+                  </ol>
+            </div>
+            <div class="step" data-cgi="DGVMX5N5SR713EGZN256" id="DGVMX5N5SR713EGZN256">
+               <header><h4 epub:type="title" id="d37749e17517"><span class="label">
+                      <span class="ordinal">8</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="UYZNBUDBBRMP2GWGZ753" id="UYZNBUDBBRMP2GWGZ753">Right-click the Start menu and click <b>Run</b>. Type <span class="monofont">regedit</span> in the Run dialog box and click <b>OK</b>. Expand <b>HKEY_CLASSES_ROOT</b> and highlight <b>.ac3</b>. Note that you can add, modify, and delete values. Double-click <b>(Default)</b>, supply the value <span class="monofont">audio</span>, and click <b>OK</b>. Close the Registry Editor when finished.</p>
+            </div>
+            <div class="step" data-cgi="XZNM8THNH3VRV9XAR182" id="XZNM8THNH3VRV9XAR182">
+               <header><h4 epub:type="title" id="d37749e17557"><span class="label">
+                      <span class="ordinal">9</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="ELSGNLFR6ZUPWF3T0067" id="ELSGNLFR6ZUPWF3T0067">Right-click the Start menu and click <b>Run</b>. Type <span class="monofont">sigverif</span> in the Run dialog box and click <b>OK</b>. In the File Signature Verification tool, click <b>Start</b> to scan your system for unsigned files. When the scan has completed, click <b>OK</b> and then click <b>Close</b> to close the File Signature Verification tool.</p>
+            </div>
+            <div class="step" data-cgi="TRZU7EV17V8PG8KSD599" id="TRZU7EV17V8PG8KSD599">
+               <header><h4 epub:type="title" id="d37749e17591"><span class="label">
+                      <span class="ordinal">10</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="NKMBR5698EHX36CLP736" id="NKMBR5698EHX36CLP736">Right-click the Start menu and click <b>Run</b>. Type <span class="monofont">cmd</span> in the Run dialog box and click <b>OK</b>. At the command prompt, type <span class="monofont">sfc /scannow</span> and press <b>Enter</b>. Note whether any system files were replaced with correct versions and close the command prompt window when finished.</p>
+            </div>
+         </div>
+      </div>
+</div><div class="activities" data-cgi="ZVPGQG7XRU8ELHFH8131" id="ZVPGQG7XRU8ELHFH8131">
+   <header><h3 epub:type="title" data-cgi="PRKR41PSXN16X6N6P215" id="PRKR41PSXN16X6N6P215"><span class="label">Project  <span class="ordinal">2-4</span>
+       </span>Cmdlets</h3>
+      
+      
+   </header>
+   <p data-cgi="HMTRR1H6XHC43NZN7840" id="HMTRR1H6XHC43NZN7840">In this Hands-On Project, you work with common Windows PowerShell administrative cmdlets.
+</p><div class="procedure" data-cgi="TANJQW754R6ZQ2NEF716" id="TANJQW754R6ZQ2NEF716">
+         <div class="steps" data-cgi="NYPKVTUYBKAJGLFA4100" id="NYPKVTUYBKAJGLFA4100">
+            <div class="step" data-cgi="AEAV2GNADERYPGP0X255" id="AEAV2GNADERYPGP0X255">
+               <header><h4 epub:type="title" id="d37749e17641"><span class="label">
+                      <span class="ordinal">1</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="URAENH7EMTKR3VSCG948" id="URAENH7EMTKR3VSCG948">On your Windows Server 2019 host, open the Google Chrome Web browser. Next, right-click the <b>Start</b> menu and choose <b>Windows PowerShell (Admin)</b> to open Windows PowerShell.</p>
+            </div>
+            <div class="step" data-cgi="VCBDZVY4XG4PYHFH9432" id="VCBDZVY4XG4PYHFH9432">
+               <header><h4 epub:type="title" id="d37749e17662"><span class="label">
+                      <span class="ordinal">2</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="BCAAA4GKPJWSK91S8682" id="BCAAA4GKPJWSK91S8682">At the prompt, type <span class="monofont">Get-Process | more</span> and press <b>Enter</b>. Note that there are many processes with a ProcessName of chrome that comprise the Google Chrome Web browser. Press <span class="monofont">q</span> to quit the more command. Next, type <span class="monofont">Stop-Process -name chrome</span> and press <b>Enter</b>. Note that the Google Chrome Web browser app was closed.</p>
+            </div>
+            <div class="step" data-cgi="XJYUBFXJJFEX1T9K4095" id="XJYUBFXJJFEX1T9K4095">
+               <header><h4 epub:type="title" id="d37749e17692"><span class="label">
+                      <span class="ordinal">3</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="RJZKJ1JBBXM8YJ958484" id="RJZKJ1JBBXM8YJ958484">At the prompt, type <span class="monofont">Get-Service | ogv</span> and press <b>Enter</b>. Note that the App Readiness service is called AppReadiness and is not started by default. Close the GridView window. Next, type <span class="monofont">Start-Service -name AppReadiness</span> and press <b>Enter</b> to start the service. Next, type <span class="monofont">Stop-Service -name AppReadiness</span> and press <b>Enter</b> to stop the App Readiness service.</p>
+            </div>
+            <div class="step" data-cgi="AQLPJ62V9MJ6ESNYC091" id="AQLPJ62V9MJ6ESNYC091">
+               <header><h4 epub:type="title" id="d37749e17726"><span class="label">
+                      <span class="ordinal">4</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="NHHBGKA8LYCMMS6DF727" id="NHHBGKA8LYCMMS6DF727">At the prompt, type <span class="monofont">Get-WindowsFeature | ogv</span> and press <b>Enter</b> to view installed roles and features. Note that the Telnet Client feature that you installed earlier in <span class="xref">Hands-On Project 2-1</span> is given the name Telnet-Client. Close the Out-GridView window. Next, type <span class="monofont">Remove-WindowsFeature -name Telnet-Client</span> and press <b>Enter</b> to remove the feature.</p>
+            </div>
+            <span aria-label="page 140" class="pagenumber rs_skip" data-after="140" epub:type="pagebreak" id="page-140" role="doc-pagebreak" title="Textbook page 140"></span>
+            <div class="step" data-cgi="TXRA4Y6Y7PQQKE1EY047" id="TXRA4Y6Y7PQQKE1EY047">
+               <header><h4 epub:type="title" id="d37749e17759"><span class="label">
+                      <span class="ordinal">5</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="MTUWH1MQM03AJVSG0091" id="MTUWH1MQM03AJVSG0091">At the prompt, type <span class="monofont">Test-NetConnection</span> and press <b>Enter</b> to test your network connectivity to internetbeacon.msedge.net. Next, execute the following commands at the command prompt, in turn. For each one, note the network configuration information displayed.
+</p><figure class="figure fixed" data-cgi="WUUSGXKVQ0C9FBCGG266" id="WUUSGXKVQ0C9FBCGG266">
+                     
+                     
+                     
+                        <img class="figureimage" src="../graphics/36158_ch02_dc_65-t2.png" height="68" width="210" alt="the image description is located in the details after the image" data-cgi="GZTVAGBRZMC016GU0387"><details><summary>Details</summary><div class="details-content"><p>Program code. In the code, the words in the variable names are merged. Line 1. Get, hypen, Net IP Configuration. Line 2. Get, hypen, Net Adapter. Line 3. Get, hypen, Net Adapter Statistics.</p></div></details>
+                     
+                  </figure>
+            </div>
+            <div class="step" data-cgi="YLHF213JA0C5KPPEH201" id="YLHF213JA0C5KPPEH201">
+               <header><h4 epub:type="title" id="d37749e17789"><span class="label">
+                      <span class="ordinal">6</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="QZGPK3XNN6EECP2J5519" id="QZGPK3XNN6EECP2J5519">Close Windows PowerShell.</p>
+            </div>
+         </div>
+      </div>
+</div><div class="activities" data-cgi="PPZTYP5ZNW1LE6G63757" id="PPZTYP5ZNW1LE6G63757">
+   <header><h3 epub:type="title" data-cgi="LKAYH0XX8MW51FJ7G687" id="LKAYH0XX8MW51FJ7G687"><span class="label">Project  <span class="ordinal">2-5</span>
+       </span>Cmdlet Output</h3>
+      
+      
+   </header>
+   <p data-cgi="YQZKV6M6D94K211S7457" id="YQZKV6M6D94K211S7457">In this Hands-On Project, you modify the output of Windows PowerShell cmdlets.
+</p><div class="procedure" data-cgi="EFFJNLNYPM6CXVVLW029" id="EFFJNLNYPM6CXVVLW029">
+         <div class="steps" data-cgi="LRMWWT10Y7WWX82YZ560" id="LRMWWT10Y7WWX82YZ560">
+            <div class="step" data-cgi="BWTYJ6HLQEFYRXF6Z671" id="BWTYJ6HLQEFYRXF6Z671">
+               <header><h4 epub:type="title" id="d37749e17825"><span class="label">
+                      <span class="ordinal">1</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="JKCKU8VJF0G5NU9KG768" id="JKCKU8VJF0G5NU9KG768">Right-click the <b>Start</b> menu and choose <b>Windows PowerShell (Admin)</b> to open Windows PowerShell.</p>
+            </div>
+            <div class="step" data-cgi="LYUKAPEC49V625DRW993" id="LYUKAPEC49V625DRW993">
+               <header><h4 epub:type="title" id="d37749e17846"><span class="label">
+                      <span class="ordinal">2</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="CVWHESM8EF054RZT2983" id="CVWHESM8EF054RZT2983">At the prompt, type <span class="monofont">cd \</span> and press <b>Enter</b> to switch to the root directory. Next, type <span class="monofont">dir</span> and press <b>Enter</b> to list the contents of this directory.</p>
+            </div>
+            <div class="step" data-cgi="PDQFHK31TBAERS0VV961" id="PDQFHK31TBAERS0VV961">
+               <header><h4 epub:type="title" id="d37749e17873"><span class="label">
+                      <span class="ordinal">3</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="GTUYNH69VRU668U13344" id="GTUYNH69VRU668U13344">At the prompt, type <span class="monofont">alias dir</span> and press <b>Enter</b>. Next, type <span class="monofont">alias gci</span> and press <b>Enter</b>. Note that dir and gci are aliases to the Get-ChildItem cmdlet. Execute the following commands at the command prompt, in turn. For each one, interpret the output (referencing the aliases and cmdlets within this module, as necessary).
+</p><figure class="figure fixed" data-cgi="YMNAEEX3H5DQ84SCY905" id="YMNAEEX3H5DQ84SCY905">
+                     
+                     
+                     
+                        <img class="figureimage" src="../graphics/36158_ch02_dc_64-t2.png" height="263" width="508" alt="the image description is located in the details after the image" data-cgi="NBWKPU2PZDKQGPJG2482"><details><summary>Details</summary><div class="details-content"><p>Program code. In the code, the words in the variable names are merged. Line 1. Get, hypen, ChildItem. Line 2. gci, pipe, sort, hypen, property name. Line 3. gci, pipe, Format, hypen, List. Line 4. gci, pipe, Format, hypen, List, hypen, property name, comma, lastwritetime. Line 5. gci, pipe, Format, hypen, Wide. Line 6. gci, pipe, Format, hypen, Wide, hypen, column 3. Line 7. gci, pipe, Format, hypen, Wide, hypen, column 3, hypen, property length. Line 8. gci, pipe, Format, hypen, Wide, hypen, column 3, hypen, property name, hypen, groupby length. Line 9. gci, pipe, Format, hypen, Table. Line 10. gci, pipe, Format, hypen, Table, hypen, property name, comma, length comma, lastwritetime. Line 11. gci, hypen, recurse. Line 12. gci, hypen, recurse, hypen, include, asterisk, period, txt.</p></div></details>
+                     
+                  </figure>
+            </div>
+            <div class="step" data-cgi="MGHALDRH8TU0GP771750" id="MGHALDRH8TU0GP771750">
+               <header><h4 epub:type="title" id="d37749e17909"><span class="label">
+                      <span class="ordinal">4</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="GSYVWGVHMSMP54CKW185" id="GSYVWGVHMSMP54CKW185">Other cmdlets that generate a large amount of information may require that you use additional Windows PowerShell features to modify command output for organization and readability. Execute the following commands at the command prompt, in turn. For each one, interpret the output (referencing the aliases and cmdlets within this module, as necessary).
+</p><figure class="figure fixed" data-cgi="QCVP8CYHB2JNBH5B0266" id="QCVP8CYHB2JNBH5B0266">
+                     
+                     
+                     
+                        <img class="figureimage" src="../graphics/36158_ch02_dc_63-t2.png" height="58" width="498" alt="the image description is located in the details after the image" data-cgi="SDNTA99HQPKCN9MFD542"><details><summary>Details</summary><div class="details-content"><p>Program code. In the code, the words in the variable names are merged. Line 1. Get, hypen, EventLog System, pipe, more. Line 2. Get, hypen, EventLog System, pipe, Group, hypen, Object eventid, pipe, more. Line 3. Get, hypen, EventLog System, pipe, Group, hypen, Object eventid, pipe, Out, hypen, GridView.</p></div></details>
+                     
+                  </figure>
+               <p data-cgi="RAVGA6G8SCJEUJBLK349" id="RAVGA6G8SCJEUJBLK349">(Close the GridView window when finished.)
+</p><figure class="figure fixed" data-cgi="QWPKY73F8SNRZB191823" id="QWPKY73F8SNRZB191823">
+                     
+                     
+                     
+                        <img class="figureimage" src="../graphics/36158_ch02_dc_63a-t2.png" height="15" width="420" alt="the image description is located in the details after the image" data-cgi="ZBYEPTUWJ0EHUHZEJ391"><details><summary>Details</summary><div class="details-content"><p>Program code. In the code, the words in the variable names are merged.Line 1. Get, hypen, EventLog System, pipe, Group, hypen, Object, eventid, pipe, ogv.</p></div></details>
+                     
+                  </figure>
+               <p data-cgi="MXNZ36CPKTS074HUD244" id="MXNZ36CPKTS074HUD244">(Close the GridView window when finished.)
+</p><figure class="figure fixed" data-cgi="LPMDTU1BZP2DUYF00471" id="LPMDTU1BZP2DUYF00471">
+                     
+                     
+                     
+                        <img class="figureimage" src="../graphics/36158_ch02_dc_63aa-t2.png" height="15" width="148" alt="the image description is located in the details after the image" data-cgi="TKBDWFCUNL2MDNS81138"><details><summary>Details</summary><div class="details-content"><p>Program code. In the code, the words in the variable names are merged.Line 1. Get, hypen, Process, pipe, ogv.</p></div></details>
+                     
+                  </figure>
+               <p data-cgi="MAQU34XJU03CVEVQA851" id="MAQU34XJU03CVEVQA851">(Close the GridView window when finished.)
+</p><figure class="figure fixed" data-cgi="BBERQE79E5PLXDGKX672" id="BBERQE79E5PLXDGKX672">
+                     
+                     
+                     
+                        <img class="figureimage" src="../graphics/36158_ch02_dc_63b-t2.png" height="35" width="462" alt="the image description is located in the details after the image" data-cgi="GSQVLVGMRW3F2AT7L529"><details><summary>Details</summary><div class="details-content"><p>Program code. In the code, the words in the variable names are merged.Line 1. Get, hypen, Process, pipe, ConvertTo, hypen, HTML, pipe, Out, hypen, File C, colon, back slash, PList, period, html. Line 2. Invoke, hypen, Item C, colon, back slash, PList, period, html.</p></div></details>
+                     
+                  </figure>
+               <p data-cgi="TLSDEPRUAB7T0NSXH522" id="TLSDEPRUAB7T0NSXH522">(Choose to open in Google Chrome, and close Chrome when finished.)
+</p><figure class="figure fixed" data-cgi="MJCAV8DNU5R27MPJX135" id="MJCAV8DNU5R27MPJX135">
+                     
+                     
+                     
+                        <img class="figureimage" src="../graphics/36158_ch02_dc_63c-t2.png" height="35" width="323" alt="the image description is located in the details after the image" data-cgi="HGZUUY2VS13GBRB96450"><details><summary>Details</summary><div class="details-content"><p>Program code. In the code, the words in the variable names are merged.Line 1. Get, hypen, Process, pipe, Export, hypen, CSV C, colon, back slash, PList, period, csv. Line 2. Invoke hypen, Item C, colon, back slash, PList, period, csv.</p></div></details>
+                     
+                  </figure>
+               <p data-cgi="GRRRRQRCM5C3KFE0D779" id="GRRRRQRCM5C3KFE0D779">(Choose to open in WordPad and close WordPad when finished.)</p>
+            </div>
+            <span aria-label="page 141" class="pagenumber rs_skip" data-after="141" epub:type="pagebreak" id="page-141" role="doc-pagebreak" title="Textbook page 141"></span>
+            <div class="step" data-cgi="WXZM872AKN81HNYP5812" id="WXZM872AKN81HNYP5812">
+               <header><h4 epub:type="title" id="d37749e17988"><span class="label">
+                      <span class="ordinal">5</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="EUWPLF7TPUCJZPY5J806" id="EUWPLF7TPUCJZPY5J806">Close Windows PowerShell.</p>
+            </div>
+         </div>
+      </div>
+</div><div class="activities" data-cgi="HXYVYMM6DW7Z4SQBK077" id="HXYVYMM6DW7Z4SQBK077">
+   <header><h3 epub:type="title" data-cgi="JRNHWLGKEP77CPWGX060" id="JRNHWLGKEP77CPWGX060"><span class="label">Project  <span class="ordinal">2-6</span> 
+       </span>PowerShell Providers</h3>
+      
+      
+   </header>
+   <p data-cgi="LKQUY62J0SQUQVZGU508" id="LKQUY62J0SQUQVZGU508">In this Hands-On Project, you work with PowerShell providers.
+</p><div class="procedure" data-cgi="LSEQWQ04H87P1FQA5547" id="LSEQWQ04H87P1FQA5547">
+         <div class="steps" data-cgi="RHRJDCF28HXM7EW7Z061" id="RHRJDCF28HXM7EW7Z061">
+            <div class="step" data-cgi="EHSXS40TWH22H4KJ6710" id="EHSXS40TWH22H4KJ6710">
+               <header><h4 epub:type="title" id="d37749e18023"><span class="label">
+                      <span class="ordinal">1</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="ARJMS2XVCXYGSMFWA087" id="ARJMS2XVCXYGSMFWA087">Right-click the <b>Start</b> menu and choose <b>Windows PowerShell (Admin)</b> to open Windows PowerShell.</p>
+            </div>
+            <div class="step" data-cgi="QGUPNJWFPUXVY5QUF931" id="QGUPNJWFPUXVY5QUF931">
+               <header><h4 epub:type="title" id="d37749e18044"><span class="label">
+                      <span class="ordinal">2</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="VHBZFBXP9M0LPD4AB939" id="VHBZFBXP9M0LPD4AB939">At the prompt, type <span class="monofont">Get-PSProvider</span> and press <b>Enter</b> to view the available PowerShell providers. Next, type <span class="monofont">Get-PSDrive</span> and press <b>Enter</b> to view the expanded list of PowerShell providers. Note that the filesystem provider is available for each drive letter on the system, and that registry provider is available for HKEY_CURRENT_USER and HKEY_LOCAL_MACHINE.</p>
+            </div>
+            <div class="step" data-cgi="DLAYNX5MHVFKZGP38874" id="DLAYNX5MHVFKZGP38874">
+               <header><h4 epub:type="title" id="d37749e18071"><span class="label">
+                      <span class="ordinal">3</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="ATCTDWVSJK30BLH6P074" id="ATCTDWVSJK30BLH6P074">Each PowerShell provider treats each item that it works with as an object. At the prompt, type <span class="monofont">gci | Get-Member</span> and press <b>Enter</b> to view the properties available for the objects within the current directory of the filesystem provider. Note that there is a PSIscontainer property that indicates that the object is a subdirectory. Next, type <span class="monofont">gci | Where-Object {$_.psiscontainer}</span> and press <b>Enter</b> to view only directories. Following this, type <span class="monofont">gci | Where-Object {!$_.psiscontainer}</span> and press <b>Enter</b> to view only non-directories (i.e., files).</p>
+            </div>
+            <div class="step" data-cgi="JKLAMLZ49MB3SDDNN575" id="JKLAMLZ49MB3SDDNN575">
+               <header><h4 epub:type="title" id="d37749e18105"><span class="label">
+                      <span class="ordinal">4</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="MQVQGDART1VDFG8BF131" id="MQVQGDART1VDFG8BF131">Within the filesystem provider, you can create, edit, and remove objects, such as files and directories. Execute the following commands at the command prompt, in turn. For each one, interpret the output (referencing the aliases and cmdlets within this module, as necessary).
+</p><figure class="figure fixed" data-cgi="NTNPD6W2C6CN21HTJ042" id="NTNPD6W2C6CN21HTJ042">
+                     
+                     
+                     
+                        <img class="figureimage" src="../graphics/36158_ch02_dc_62-t2.png" height="220" width="525" alt="the image description is located in the details after the image" data-cgi="XVBZTHN7N791B1GVC944"><details><summary>Details</summary><div class="details-content"><p>Program code. In the code, the words in the variable names are merged. Line 1. new, hypen, item, hypen, path C, colon, back slash, hypen, name mydir, hypen, type directory. Line 2. new, hypen, item, hypen, path C, colon, back slash, mydir, hypen, name lala, period, txt, hypen, type file. Line 3. get, hypen, content c, colon, back slash, mydir, back slash, lala, period, txt. Line 4. add, hypen, content c, colon, back slash, mydir, back slash, lala, period, txt, hypen, hypen, value, open quotes, This is line 1, close quotes . Line 5. add, hypen, content c, colon, back slash, mydir, back slash, lala, period, txt, hypen, value, open quotes, This is line 2, close quotes . Line 6. add, hypen, content c, colon, back slash, mydir, back slash, lala, period, txt, hypen, value, open quotes, This is line 3, close quotes . Line 7. get, hypen, content c, colon, back slash, mydir, back slash, lala, period, txt. Line 8. set, hypen, content c, colon, back slash, mydir, back slash, lala, period, txt, hypen, value, open quotes, This is the only line, close quotes . Line 9. get, hypen, content c, colon, back slash, mydir, back slash, lala, period, txt. Line 10. remove, hypen, item c colon, back slash, mydir, hypen, recurse.</p></div></details>
+                     
+                  </figure>
+            </div>
+            <span aria-label="page 142" class="pagenumber rs_skip" data-after="142" epub:type="pagebreak" id="page-142" role="doc-pagebreak" title="Textbook page 142"></span>
+            <div class="step" data-cgi="PCNA5Y3VPCU5KZCUL875" id="PCNA5Y3VPCU5KZCUL875">
+               <header><h4 epub:type="title" id="d37749e18132"><span class="label">
+                      <span class="ordinal">5</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="XYAR57EQKCYJ5EAK8377" id="XYAR57EQKCYJ5EAK8377">At the prompt, type <span class="monofont">sl env:\</span> and press <b>Enter</b> to switch to the environment provider. Next, type <span class="monofont">gci</span> and press <b>Enter</b> to view the environment variables on the system. In many PowerShell providers, you can instead use the Get-Item cmdlet (alias gi) to view items. Type <span class="monofont">gi *</span> and press <b>Enter</b> to view all items within the environment provider. Next, execute the following commands at the command prompt, in turn. For each one, interpret the output (referencing the aliases and cmdlets within this module, as necessary).
+</p><figure class="figure fixed" data-cgi="VHGNATHBMRWQY8LVJ950" id="VHGNATHBMRWQY8LVJ950">
+                     
+                     
+                     
+                        <img class="figureimage" src="../graphics/36158_ch02_dc_61-t2.png" height="242" width="438" alt="the image description is located in the details after the image" data-cgi="ZJSV5SC7FALMKHEQT391"><details><summary>Details</summary><div class="details-content"><p>Program code. In the code, the words in the variable names are merged. Line 1. gi, asterisk, pipe, sort, hypen, object, hypen, property name. Line 2. gi, windir. Line 3. gi, windir, pipe, format, hypen, list, asterisk . Line 4. new hypen, item, hypen, path, period, hypen, name lala, hypen, value, open quotes, This is cool exclamation mark, close quotes . Line 5. gi lala. Line 6. gi lala, pipe, format, hypen, list, asterisk . Line 7. rename, hypen, item, hypen, path env, colon, lala, hypen, newname po. Line 8. gi po. Line 9. gi po, pipe, format, hypen, list, asterisk . Line 10. gi, asterisk, pipe, sort, hypen, object, hypen, property name. Line 11. remove, hypen, item po.</p></div></details>
+                     
+                  </figure>
+            </div>
+            <div class="step" data-cgi="XKRUS3QLTB256ZGBY359" id="XKRUS3QLTB256ZGBY359">
+               <header><h4 epub:type="title" id="d37749e18175"><span class="label">
+                      <span class="ordinal">6</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="WCTX5PC22P84Z29X1337" id="WCTX5PC22P84Z29X1337">At the prompt, type <span class="monofont">sl variable:\</span> and press <b>Enter</b> to switch to the variable provider. Next, type <span class="monofont">gci</span> and press <b>Enter</b> to view the user-defined PowerShell variables on the system. Next, execute the following commands at the command prompt, in turn. For each one, interpret the output (referencing the aliases and cmdlets within this module, as necessary).
+</p><figure class="figure fixed" data-cgi="YNAATVTATNPTRTA1T284" id="YNAATVTATNPTRTA1T284">
+                     
+                     
+                     
+                        <img class="figureimage" src="../graphics/36158_ch02_dc_60-t2.png" height="198" width="289" alt="the image description is located in the details after the image" data-cgi="TSCJXQLAEZD9KVNE3048"><details><summary>Details</summary><div class="details-content"><p>Program code. In the code, the words in the variable names are merged. Line 1. gci, pipe, sort, left brace, dollar sign, underscore, period, Name, right brace. Line 2. get, hypen, variable home. Line 3. get, hypen, variable home, pipe, format, hypen, list. Line 4. new, hypen, variable oobla. Line 5. set, hypen, variable oobla, hypen, value, open quotes, Toast, close quotes. Line 6. get, hypen, variable oobla. Line 7. set, hypen, variable tinky, hypen, value, open quotes, Winky, close quotes . Line 8. get, hypen, variable tinky. Line 9. remove, hypen, variable tinky.</p></div></details>
+                     
+                  </figure>
+            </div>
+            <div class="step" data-cgi="AXQR3LFCRZB4TVZ0K825" id="AXQR3LFCRZB4TVZ0K825">
+               <header><h4 epub:type="title" id="d37749e18211"><span class="label">
+                      <span class="ordinal">7</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="GRTN95JLN78MH3UNW020" id="GRTN95JLN78MH3UNW020">At the prompt, type <span class="monofont">sl alias:\</span> and press <b>Enter</b> to switch to the alias provider. Next, type <span class="monofont">gci</span> and press <b>Enter</b> to view the user-defined PowerShell variables on the system. Following this, type <span class="monofont">gci | Where-Object {$_.name –like "c*"}</span> and press <b>Enter</b> to view aliases that start with c. Note that “clear” is an alias to Clear-Host.</p>
+            </div>
+            <div class="step" data-cgi="EFVYWZBAU3U2F0H85895" id="EFVYWZBAU3U2F0H85895">
+               <header><h4 epub:type="title" id="d37749e18245"><span class="label">
+                      <span class="ordinal">8</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="UASP1L7GTNF234F12138" id="UASP1L7GTNF234F12138">You can also view aliases by their definition. At the prompt, type <span class="monofont">gci | Where-Object {$_.definition –like "c*"}</span> to view aliases that point to cmdlets that start with the letter c.</p>
+            </div>
+            <span aria-label="page 143" class="pagenumber rs_skip" data-after="143" epub:type="pagebreak" id="page-143" role="doc-pagebreak" title="Textbook page 143"></span>
+            <div class="step" data-cgi="LSWTJK7KC7B281676071" id="LSWTJK7KC7B281676071">
+               <header><h4 epub:type="title" id="d37749e18265"><span class="label">
+                      <span class="ordinal">9</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="DYSQ8EDVG026D402V201" id="DYSQ8EDVG026D402V201">At the prompt, type <span class="monofont">sl function:\</span> and press <b>Enter</b> to switch to the function provider. Next, type <span class="monofont">gci</span> and press <b>Enter</b> to view the functions on the system. Note that Clear-Host is a function. Next, type <span class="monofont">Get-Content Clear-Host</span> and press <b>Enter</b> to view the content of the Clear-Host function.</p>
+            </div>
+            <div class="step" data-cgi="HCKBY29JU8B45W8EY008" id="HCKBY29JU8B45W8EY008">
+               <header><h4 epub:type="title" id="d37749e18300"><span class="label">
+                      <span class="ordinal">10</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="QWYMNFBAUSKZNR1U5099" id="QWYMNFBAUSKZNR1U5099">At the prompt, type <span class="monofont">sl cert:\</span> and press <b>Enter</b> to switch to the certificate provider. Next, type <span class="monofont">gci</span> and press <b>Enter</b>. Note that the certificate provider can manage certificates for the current user and local computer. Next, type <span class="monofont">gci -recurse</span> and press <b>Enter</b>. Note the self-signed certificate installed on your system by the Windows Admin Center is displayed in the list.</p>
+            </div>
+            <div class="step" data-cgi="BHTVJYTWBN0NHENA4698" id="BHTVJYTWBN0NHENA4698">
+               <header><h4 epub:type="title" id="d37749e18334"><span class="label">
+                      <span class="ordinal">11</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="GWRCRMV1RW19YBP7T921" id="GWRCRMV1RW19YBP7T921">At the prompt, type <span class="monofont">sl 'HKLM:\software\microsoft\windows nt\currentversion'</span> and press <b>Enter</b> to switch to the registry provider for HKEY_LOCAL_MACHINE and navigate to the currentversion subkey for your Windows server system. Next, type <span class="monofont">set-itemproperty –path winlogon –name legalnoticecaption –value "Hey!"</span> and press <b>Enter</b> to set a legal notice caption for local logon attempts. Finally, type <span class="monofont">set-itemproperty –path winlogon –name legalnoticetext –value "What are you doing on my system?"</span> and press <b>Enter</b> to modify the text message for local logon attempts.</p>
+            </div>
+            <div class="step" data-cgi="JPXZQ34700ALKSTVL800" id="JPXZQ34700ALKSTVL800">
+               <header><h4 epub:type="title" id="d37749e18368"><span class="label">
+                      <span class="ordinal">12</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="SHZDSAYY38KA6QXVB132" id="SHZDSAYY38KA6QXVB132">Right-click the <b>Start</b> menu and click <b>Shut down or sign out</b>, <b>Sign out</b>. Press Ctrl+Alt+Del (or Ctrl+Alt+End if you are running Windows Server 2019 within a Hyper-V virtual machine on Windows 10). Note your legal notice and click <b>OK</b>. Log into the system as Administrator using the password <b>Secret555</b>.</p>
+            </div>
+         </div>
+      </div>
+</div><div class="activities" data-cgi="RELDCAQ0HN2S0F77D520" id="RELDCAQ0HN2S0F77D520">
+   <header><h3 epub:type="title" data-cgi="DRAZUG12D77ABJCJW707" id="DRAZUG12D77ABJCJW707"><span class="label">Project  <span class="ordinal">2-7</span>
+       </span>WMI</h3>
+      
+      
+   </header>
+   <p data-cgi="WTSAWRZJV2KKQ2RAT284" id="WTSAWRZJV2KKQ2RAT284">In this Hands-On Project, you query WMI using Windows PowerShell.
+</p><div class="procedure" data-cgi="PYLEYFLNG6C777P2Z254" id="PYLEYFLNG6C777P2Z254">
+         <div class="steps" data-cgi="AEEAHC1E4FPYC15DR327" id="AEEAHC1E4FPYC15DR327">
+            <div class="step" data-cgi="TZZDQQASZ9MY4T46X481" id="TZZDQQASZ9MY4T46X481">
+               <header><h4 epub:type="title" id="d37749e18418"><span class="label">
+                      <span class="ordinal">1</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="MRFG0FVLKLYD4X4YX513" id="MRFG0FVLKLYD4X4YX513">Right-click the <b>Start</b> menu and choose <b>Windows PowerShell (Admin)</b> to open Windows PowerShell.</p>
+            </div>
+            <div class="step" data-cgi="FETR0TBSECY45RJFS024" id="FETR0TBSECY45RJFS024">
+               <header><h4 epub:type="title" id="d37749e18439"><span class="label">
+                      <span class="ordinal">2</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="GUHWWA3VHQB10RPYK489" id="GUHWWA3VHQB10RPYK489">At the prompt, type <span class="monofont">alias gwmi</span> and press <b>Enter</b>. Note that gwmi is an alias to Get-WmiObject. Next, execute the following commands at the command prompt, in turn. For each one, interpret the output (referencing the aliases and cmdlets within this module, as necessary).
+</p><figure class="figure fixed" data-cgi="ASLJZBEGVZ15DMPLQ748" id="ASLJZBEGVZ15DMPLQ748">
+                     
+                     
+                     
+                        <img class="figureimage" src="../graphics/36158_ch02_dc_59-t2.png" height="502" width="473" alt="the image description is located in the details after the image" data-cgi="QJRNJ5851UJ7Z3B4U514"><details><summary>Details</summary><div class="details-content"><p>Program code. In the code, the words in the variable names are merged. Line 1. gwmi win32, underscore, bios. Line 2. gwmi win32, underscore, processor. Line 3. gwmi win32, underscore, processor, pipe, gm. Line 4. gwmi win32, underscore, computersystem. Line 5. gwmi win32, underscore, computersystem, pipe, fl, asterisk . Line 6. gwmi win32, underscore, logicaldisk. Line 7. gwmi win32, underscore, logicaldisk, pipe, fl, asterisk. Line 8. gwmi win32, underscore, diskdrive. Line 9. gwmi win32, underscore, diskdrive, pipe, fl, asterisk. Line 10. gwmi win32, underscore, share. Line 11. gwmi win32, underscore, share, pipe fl, asterisk. Line 12. gwmi win32, underscore, network adapter configuration. Line 13. gwmi win32, underscore, network adapter configuration, pipe, fl, asterisk. Line 14. gwmi win32, underscore, desktop. Line 15. gwmi win32, underscore, desktop, pipe, fl, asterisk . Line 16. gwmi win32, underscore, share, hypen, filter name =, open quotes, open single quote, c, dollar sign, close single quote, close quotes. Line 17. gwmi win32, underscore, logicaldisk, hypen, filter name =, open quotes, open single quote, c, dollar sign, close single quote, close quotes, pipe. Line 18. Measure, hypen, Object, hypen, property freespace, hypen, Minimum, hypen, Maximum. Line 19. gwmi win32, underscore, logicaldisk, hypen, filter name =, open quotes, open single quote, c, dollar sign, close single quote, close quotes, pipe. Line 20. Measure, hypen, Object, hypen, Property freespace, hypen, Minimum, hypen, Maximum, pipe . Line 21. Select, hypen, Object, hypen, Property freespace, comma, maximum, comma, minimum, pipe . Line 22. Format, hypen, Table, hypen, autosize.</p></div></details>
+                     
+                  </figure>
+            </div>
+            <span aria-label="page 144" class="pagenumber rs_skip" data-after="144" epub:type="pagebreak" id="page-144" role="doc-pagebreak" title="Textbook page 144"></span>
+            <div class="step" data-cgi="AUNL52G1RJ3C9WY99944" id="AUNL52G1RJ3C9WY99944">
+               <header><h4 epub:type="title" id="d37749e18471"><span class="label">
+                      <span class="ordinal">3</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="MCNVCQKN8KNQ02BZC262" id="MCNVCQKN8KNQ02BZC262">You can also query WMI using WQL syntax. Execute the following commands at the command prompt, in turn. For each one, interpret the output (referencing the aliases and cmdlets within this module, as necessary).
+</p><figure class="figure fixed" data-cgi="ESHVQWJV43VGQX6WQ943" id="ESHVQWJV43VGQX6WQ943">
+                     
+                     
+                     
+                        <img class="figureimage" src="../graphics/6158_ch02_dc_58-t2.png" height="230" width="585" alt="the image description is located in the details after the image" data-cgi="AXKJVB2Q1LFW5K8PN447"><details><summary>Details</summary><div class="details-content"><p>Program code. In the code, the words in the variable names are merged. Line 1. gwmi, hypen, query, open quotes, Select, asterisk, from win32, underscore, share, close quotes . Line 2. gwmi, hypen, query, open quotes, Select, asterisk, from win32, underscore, share, close quotes, pipe, gm. Line 3. gwmi, hypen, query, oepn quotes, Select name, comma, path, comma, allow maximum from win32, underscore, share, close quotes. Line 4. gwmi, hypen, query, open quotes, Select name, comma, path, comma, allow maximum from win32, underscore, share where. Line 5. name =, open single quote, c, dollar sign, close single quote, close quotes. Line 6. gwmi, hypen, query, open quotes, Select name from win32, underscore, share, close quotes, pipe, Sort, hypen, Object, hypen, property. Line 7. name, pipe, Format, hypen, List, hypen, property name. Line 8. gwmi, hypen, query, open quotes, Select name from win32, underscore, share, close quotes, pipe, Sort, hypen, Object, hypen, property. Line 9. name, pipe, Format, hypen, List, hypen, property name &gt; C, colon, back slash, scripts, back slash, Share Information, period, txt. Line 10. notepad C, colon, back slash, scripts, back slash, Share Information, period, txt.</p></div></details>
+                     
+                  </figure>
+            </div>
+            <div class="step" data-cgi="KTLHMJ66W64UJ2H80669" id="KTLHMJ66W64UJ2H80669">
+               <header><h4 epub:type="title" id="d37749e18495"><span class="label">
+                      <span class="ordinal">4</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="XHJNWNPVKZEA0R57D954" id="XHJNWNPVKZEA0R57D954">Close Notepad and Windows PowerShell.</p>
+            </div>
+         </div>
+      </div>
+</div><div class="activities" data-cgi="NJHRQ5U4EJ0UAUBAK597" id="NJHRQ5U4EJ0UAUBAK597">
+   <header><h3 epub:type="title" data-cgi="YADUL19CWJ8TVAGBA594" id="YADUL19CWJ8TVAGBA594"><span class="label">Project  <span class="ordinal">2-8</span>
+       </span>PowerShell Customization</h3>
+      
+      
+   </header>
+   <p data-cgi="PNFCKK7ZU58HY36GK792" id="PNFCKK7ZU58HY36GK792">In this Hands-On Project, you enable script execution and create a PowerShell profile script that loads a custom alias and function. Next, you create a PowerShell console file to customize your Windows PowerShell experience.
+</p><div class="procedure" data-cgi="EUEJ1CV4XHKGWXVK4398" id="EUEJ1CV4XHKGWXVK4398">
+         <div class="steps" data-cgi="VQJJJKZ9SL9FJ33M1378" id="VQJJJKZ9SL9FJ33M1378">
+            <div class="step" data-cgi="MERV409R3NPB979SJ328" id="MERV409R3NPB979SJ328">
+               <header><h4 epub:type="title" id="d37749e18530"><span class="label">
+                      <span class="ordinal">1</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="ZMGB34TXL2MNY2VK2025" id="ZMGB34TXL2MNY2VK2025">Right-click the <b>Start</b> menu and choose <b>Windows PowerShell (Admin)</b> to open Windows PowerShell.</p>
+            </div>
+            <div class="step" data-cgi="WHHFQ52PQMRNSPNQ2176" id="WHHFQ52PQMRNSPNQ2176">
+               <header><h4 epub:type="title" id="d37749e18551"><span class="label">
+                      <span class="ordinal">2</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="ERET86Q600N1VDXK6788" id="ERET86Q600N1VDXK6788">At the prompt, type <span class="monofont">Set-ExecutionPolicy unrestricted</span> and press <b>Enter</b>. Type <span class="monofont">Y</span> when prompted to confirm. Next, type <span class="monofont">Test-Path $profile</span> and press <b>Enter</b>. Note that you do not have a PowerShell profile script configured.</p>
+            </div>
+            <span aria-label="page 145" class="pagenumber rs_skip" data-after="145" epub:type="pagebreak" id="page-145" role="doc-pagebreak" title="Textbook page 145"></span>
+            <div class="step" data-cgi="VAQH4L9DT3D3XN8ZN455" id="VAQH4L9DT3D3XN8ZN455">
+               <header><h4 epub:type="title" id="d37749e18583"><span class="label">
+                      <span class="ordinal">3</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="EBRVTSY5L873PLBNV879" id="EBRVTSY5L873PLBNV879">At the prompt, type <span class="monofont">New-Item –path $profile –itemtype file -force</span> and press <b>Enter</b> to create a PowerShell profile. Next, type <span class="monofont">notepad $profile</span> to open your PowerShell profile script within Notepad. Add the following lines:
+</p><figure class="figure fixed" data-cgi="XJLWFXN5YK0C5KNZ8536" id="XJLWFXN5YK0C5KNZ8536">
+                     
+                     
+                     
+                        <img class="figureimage" src="../graphics/36158_ch02_dc_57-t2.png" height="68" width="272" alt="the image description is located in the details after the image" data-cgi="ZQQFGJA8QJVMUUHUC854"><details><summary>Details</summary><div class="details-content"><p>Program code. In the code, the words in the variable names are merged. Line 1. Write, hypen, Host, open quotes, Hello, close quotes. Line 2. Set, hypen, Alias lala, Get, hypen, Service. Line 3. function pro, left brace, notepad, dollar sign, profile, right brace.</p></div></details>
+                     
+                  </figure>
+            </div>
+            <div class="step" data-cgi="DXVZF6HUYNCXVSD8G621" id="DXVZF6HUYNCXVSD8G621">
+               <header><h4 epub:type="title" id="d37749e18616"><span class="label">
+                      <span class="ordinal">4</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="KFVJ9LRB6CQ18NZCT209" id="KFVJ9LRB6CQ18NZCT209">Click <b>File, Save</b> within Notepad to save your changes. Close Notepad when finished.</p>
+            </div>
+            <div class="step" data-cgi="ABKUW3P9A8LJN493W623" id="ABKUW3P9A8LJN493W623">
+               <header><h4 epub:type="title" id="d37749e18635"><span class="label">
+                      <span class="ordinal">5</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="XNJDWWBJUP4YZV7SX828" id="XNJDWWBJUP4YZV7SX828">At the prompt, type <span class="monofont">cd Desktop</span> and press <b>Enter</b> to switch to your Desktop directory. Next, type <span class="monofont">export-console CustomPS</span> and press <b>Enter</b> to create a CustomPS.psc1 file on your Desktop that can be used to open Windows PowerShell. Close Windows PowerShell when finished.</p>
+            </div>
+            <div class="step" data-cgi="YSPHGT6N11PKMGXM9997" id="YSPHGT6N11PKMGXM9997">
+               <header><h4 epub:type="title" id="d37749e18662"><span class="label">
+                      <span class="ordinal">6</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="UCNNPMM5E2AM3NCVH828" id="UCNNPMM5E2AM3NCVH828">Double-click the <b>CustomPS</b> file on your desktop to open Windows PowerShell. Note that your PowerShell profile script executed and printed Hello to the screen. Type <span class="monofont">lala</span> and press <b>Enter</b> to test your alias. Next, type <span class="monofont">pro</span> and press <b>Enter</b> to test your function. Close Notepad when finished.</p>
+            </div>
+            <div class="step" data-cgi="GHDNWLH5NLDZFZ1PT225" id="GHDNWLH5NLDZFZ1PT225">
+               <header><h4 epub:type="title" id="d37749e18692"><span class="label">
+                      <span class="ordinal">7</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="APRL5DDWFY5A5XHEK951" id="APRL5DDWFY5A5XHEK951">Click the PowerShell icon in the upper left of the Windows PowerShell window and click <b>Properties</b>. Navigate through the properties and make some visual changes to your liking (color, font, and so on). Click <b>OK</b> to close the Properties dialog box and close Windows PowerShell when finished.</p>
+            </div>
+            <div class="step" data-cgi="DZVWYMCGKRPN25K4G465" id="DZVWYMCGKRPN25K4G465">
+               <header><h4 epub:type="title" id="d37749e18713"><span class="label">
+                      <span class="ordinal">8</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="AZSY3JHD25CWD974C976" id="AZSY3JHD25CWD974C976">Double-click the <b>CustomPS</b> file on your desktop to open Windows PowerShell. Note that your customizations are available. Close Windows PowerShell when finished.</p>
+            </div>
+            <div class="step" data-cgi="DQBYP83S6GVE7W33F221" id="DQBYP83S6GVE7W33F221">
+               <header><h4 epub:type="title" id="d37749e18731"><span class="label">
+                      <span class="ordinal">9</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="XFHHLNAQXMA6WE5QM495" id="XFHHLNAQXMA6WE5QM495">Right-click the Start menu and choose <b>Windows PowerShell (Admin)</b> to open Windows PowerShell. Note that your customizations are not available as PowerShell was not started via the CustomPS.psc1 file.</p>
+            </div>
+            <div class="step" data-cgi="VKAL7Y33N7F4S3QBH781" id="VKAL7Y33N7F4S3QBH781">
+               <header><h4 epub:type="title" id="d37749e18749"><span class="label">
+                      <span class="ordinal">10</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="RJHJQXYHEW41BNBFX474" id="RJHJQXYHEW41BNBFX474">Close Windows PowerShell.</p>
+            </div>
+         </div>
+      </div>
+</div><div class="activities" data-cgi="XVAX6CGPK85V7Z6Q0139" id="XVAX6CGPK85V7Z6Q0139">
+   <header><h3 epub:type="title" data-cgi="NVJJF9VPVGS8U7VYJ752" id="NVJJF9VPVGS8U7VYJ752"><span class="label">Project  <span class="ordinal">2-9</span>
+       </span>PowerShell Scripting</h3>
+      
+      
+   </header>
+   <p data-cgi="NCALLMAWK2L0AYUGL541" id="NCALLMAWK2L0AYUGL541">In this Hands-On Project, you create and execute a basic PowerShell script using Windows PowerShell ISE, and execute it on the system.
+</p><div class="procedure" data-cgi="TUWXBHZ8CANPFTE89326" id="TUWXBHZ8CANPFTE89326">
+         <div class="steps" data-cgi="NXRTEQ9F0U87Y26GP661" id="NXRTEQ9F0U87Y26GP661">
+            <div class="step" data-cgi="GWTQ6GT4XS70DA3UL293" id="GWTQ6GT4XS70DA3UL293">
+               <header><h4 epub:type="title" id="d37749e18784"><span class="label">
+                      <span class="ordinal">1</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="PFEJ9FMEVXVQFGHQB452" id="PFEJ9FMEVXVQFGHQB452">Click <b>Start</b>. Next, right-click <b>Windows PowerShell ISE</b> and click <b>More, Run as administrator</b>.</p>
+            </div>
+            <div class="step" data-cgi="GGARVKH70YH20FEGD866" id="GGARVKH70YH20FEGD866">
+               <header><h4 epub:type="title" id="d37749e18808"><span class="label">
+                      <span class="ordinal">2</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="ENLYTC7XN396WVF19382" id="ENLYTC7XN396WVF19382">Click the <b>New Script</b> button above the Windows PowerShell pane, and enter the following contents:
+</p><figure class="figure fixed" data-cgi="FRGB0Y7VD00C52L0S948" id="FRGB0Y7VD00C52L0S948">
+                     
+                     
+                     
+                        <img class="figureimage" src="../graphics/36158_ch02_dc_56-t2.png" height="177" width="578" alt="the image description is located in the details after the image" data-cgi="BFYVN7DD0LGUHGQM1917"><details><summary>Details</summary><div class="details-content"><p>Program code. In the code, the words in the variable names are merged. Line 1. hash, This script prints process information to the screen for. Line 2. hash, a process that the user is prompted to supply during. Line 3. hash, script execution. Line 4. dollar sign, ans =, Read, hypen, Host, open quotes, What process would you like to query, question mark, close quotes . Line 5. Get, hypen, Wmi Object win32, underscore, process, hypen, Filter open quotes, name =, open single quote, dollar sign, ans, close single quote, close quotes, pipe, Format, hypen, Table. Line 6. Handle Count, comma, Virtual Size, comma, User Mode Time, comma, Kernel Mode Time, comma, Process ID, comma, Name.</p></div></details>
+                     
+                  </figure>
+            </div>
+            <span aria-label="page 146" class="pagenumber rs_skip" data-after="146" epub:type="pagebreak" id="page-146" role="doc-pagebreak" title="Textbook page 146"></span>
+            <div class="step" data-cgi="AQUZK485D1VL2GNG6543" id="AQUZK485D1VL2GNG6543">
+               <header><h4 epub:type="title" id="d37749e18837"><span class="label">
+                      <span class="ordinal">3</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="EUNJRV2Q0V2Y2PN74469" id="EUNJRV2Q0V2Y2PN74469">Click the <b>Run Script</b> button (or press <b>F5</b>) to test your script in the Windows PowerShell console. Type the value <span class="monofont">svchost.exe</span> and press <b>Enter</b> when prompted.
+</p><aside class="dependent narrative fixed" epub:type="sidebar" data-cgi="VSJETFRE1NTMVLS27094" id="VSJETFRE1NTMVLS27094" aria-labelledby="EYFZ1HE04H1JQPBCQ134">
+                     <header><h5 data-cgi="EYFZ1HE04H1JQPBCQ134" id="EYFZ1HE04H1JQPBCQ134"><span class="label">Note <img alt="&nbsp;" class="inlinegraphic" src="../graphics/note-t2.png" height="24" width="21" data-cgi="VLQQASK4NXPDN3AVB637">
+                              
+                           
+                        </span></h5></header>
+                     
+                     <p data-cgi="SPMC4HVCH7ETR9CN6955" id="SPMC4HVCH7ETR9CN6955">If there are errors in your script, fix the typos in your script and repeat <span class="xref">Step 3</span>.</p>
+                  </aside>
+            </div>
+            <div class="step" data-cgi="KSBVZWUYA38KA3ZP8290" id="KSBVZWUYA38KA3ZP8290">
+               <header><h4 epub:type="title" id="d37749e18880"><span class="label">
+                      <span class="ordinal">4</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="YGWPGQK5H29G8PU2J590" id="YGWPGQK5H29G8PU2J590">After your script executes properly, click <b>File, Save As</b>. Type <span class="monofont">C:\myscript.ps1</span> in the File name box and click <b>Save</b>.</p>
+            </div>
+            <div class="step" data-cgi="FSCFD6L96HDQWU4E3355" id="FSCFD6L96HDQWU4E3355">
+               <header><h4 epub:type="title" id="d37749e18905"><span class="label">
+                      <span class="ordinal">5</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="NVWQSCQSK9GKKDU67430" id="NVWQSCQSK9GKKDU67430">Close Windows PowerShell ISE.</p>
+            </div>
+            <div class="step" data-cgi="XBZD31MHDJUPP6R4K625" id="XBZD31MHDJUPP6R4K625">
+               <header><h4 epub:type="title" id="d37749e18920"><span class="label">
+                      <span class="ordinal">6</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="SWWB7UHXTGTGJVK0K577" id="SWWB7UHXTGTGJVK0K577">Right-click the <b>Start</b> menu and choose <b>Windows PowerShell (Admin)</b> to open Windows PowerShell.</p>
+            </div>
+            <div class="step" data-cgi="ECYMXRGGLACGACUWR141" id="ECYMXRGGLACGACUWR141">
+               <header><h4 epub:type="title" id="d37749e18941"><span class="label">
+                      <span class="ordinal">7</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="GPGQ2TK2G1V13DC4E606" id="GPGQ2TK2G1V13DC4E606">At the prompt, type <span class="monofont">cd \</span> and press <b>Enter</b> to switch to the root of C:\. Next, type <span class="monofont">./myscript.ps1</span> and press <b>Enter</b> to execute your script again. Type the value <span class="monofont">svchost.exe</span> and press <b>Enter</b> when prompted.</p>
+            </div>
+            <div class="step" data-cgi="THWBRNPQ45TSCHNCJ374" id="THWBRNPQ45TSCHNCJ374">
+               <header><h4 epub:type="title" id="d37749e18975"><span class="label">
+                      <span class="ordinal">8</span>
+                   </span></h4>
+                  
+               </header>
+               <p data-cgi="HTVTUNPR4ST2JHMNK808" id="HTVTUNPR4ST2JHMNK808">Close Windows PowerShell.</p>
+            </div>
+         </div>
+      </div>
+</div></section>
