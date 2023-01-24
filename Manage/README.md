@@ -2,7 +2,7 @@
 
 ## The Trick:
 
-**Create account on Hyper-V that matches your client machine!!**
+**Create account on the Guest Hyper-V Server that matches your Host server (in this case it is technically the client machine)!!**
 
 A succesffuly connection requires you to configure both your **Server (HYPERV-GUEST - Server 2019 Guest)** and the **Client (Host Machine - Azure Labs)**. The steps for each are outlined below.
 
@@ -15,7 +15,7 @@ Set the server's hostname
   - `Enable-PSRemoting`
   - `Enable-WSManCredSSP -Role server`
 
-### Host Machine - Azure Labs Windows 10 (Host):
+### Host Machine - Azure Labs (Host):
 
 - If not already installed, Install HyperV Manager using Powershell:
 win+x>Programs And Features>Turn Windows Features On or Off>Hyper-V>Hyper-V Management Tools

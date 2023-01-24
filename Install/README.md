@@ -26,16 +26,21 @@ The "Host Server" will also serve as your management console machine (aka tech m
  - We'll use the Free version of HyperV which is bundled with Windows Server Core (so no gui)
  - It's availabe from the [Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-hyper-v-server-2019)
 
+ ## Configure the network
+ - Launch HyperV Manager and create a new "Internal" Virtual Switch named "Internal Virtual Switch"
+ - This will add a new network adaptor to your host with a matching name.
+ - Set a static IPv4 address on this adapter of 192.168.1.1, Mask 255.255.255.0, no gateway, no dns.
+
  ## Create Guest Server VM
  - Launch HyperV Manager and use the "Create New Virtual Machine" wizard to create a VM
  - Choose a descriptive name like "Guest HyperV Server"
  - Make sure you choose "Generation 2" hardware
  - Assign your new server 8Gb (8000Mb) of memory and use Dynamic Allocation
- - Connect to your "Default Switch"
+ - Connect to your "Internal Virtual Switch"
  - Default Hard disk is fine.
  - Connect to the ISO for installation source you downloaded above.
  - Start the vm and press any key to start to start the installation.
- - Choose "Custom" installation and select the disk to proceed with the install.
+ - Choose "Custom" installation and select the unallocated disk to proceed with the install.
  - That's it!
 
 ## Configure Your Server
@@ -47,6 +52,7 @@ The "Host Server" will also serve as your management console machine (aka tech m
    2. Set the hostname, something simple but descriptive like `HYPERV-GUEST`
    3. Enable Ping replies.
    4. Enable REmote Desktop.
-   5. Note the IP address of your server!
+   5. Set a static IPv4 address of 192.168.1.100, mask 255.255.255.0, no gateway.
+   6. Test pinging your Guest HyeperV server from the host server.
 
 
