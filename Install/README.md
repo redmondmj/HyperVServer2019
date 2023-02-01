@@ -19,9 +19,7 @@ The "Host Server" will also serve as your management console machine (aka tech m
       - Click "Turn Windows Features On or Off"
       - Place a check next to HyperV and click ok
    - OR use Powershell: `Install-WindowsFeature -Name Hyper-V -IncludeManagementTools -Restart`
- - We'll need to allow our nested HyperV server to access CPU and network resources, to do that launch Powershell as administrator and run
-   - `Set-VMProcessor -VMName Name -ExposeVirtualizationExtensions $true`
-   - `Get-VMNetworkAdapter -VMName Name | Set-VMNetworkAdapter -MacAddressSpoofing On`
+
 ## Download 
  - We'll use the Free version of HyperV which is bundled with Windows Server Core (so no gui)
  - It's availabe from the [Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-hyper-v-server-2019)
@@ -39,6 +37,9 @@ The "Host Server" will also serve as your management console machine (aka tech m
  - Connect to your "Internal Virtual Switch"
  - Default Hard disk is fine.
  - Connect to the ISO for installation source you downloaded above.
+ - We'll need to allow our nested HyperV server to access CPU and network resources, to do that launch Powershell as administrator and run
+   - `Set-VMProcessor -VMName "Guest HyperV Server" -ExposeVirtualizationExtensions $true`
+   - `Get-VMNetworkAdapter -VMName "Guest HyperV Server" | Set-VMNetworkAdapter -MacAddressSpoofing On`
  - Start the vm and press any key to start to start the installation.
  - Choose "Custom" installation and select the unallocated disk to proceed with the install.
  - That's it!
