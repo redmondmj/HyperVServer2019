@@ -18,15 +18,15 @@ A succesfful connection requires you to configure both your **Server (HYPERV-GUE
 
 - Add your Hyper-V server to the hosts file via Powershell as admin (replace IP and Hostname!)
   - `Add-Content -Path C:\Windows\System32\drivers\etc\hosts -Value "n192.168.1.100 HYPERV-GUEST"`
-  - OR via notepad.exe as admin
-  - edit `C:\Windows\System32\drivers\etc\hosts`  (note it has no extension so make sure you view all file types)
-  - Add your server IP and hostname to the bottom of the file:
-  - i.e. "1.1.1.1.1   HOST-NAME"
+  - OR edit manually via notepad.exe as admin
+    - launch notepad.exe as administrator
+    - edit `C:\Windows\System32\drivers\etc\hosts`  (note it has no extension so make sure you view all file types)
+    - Add your server IP and hostname to the bottom of the file: i.e. "192.168.1.100    HYPERV-GUEST"
  - Add your Hyper-V server to TrustedHosts and allow authentication
-   - via Powershell as admin (replace "fqdn-of-hyper-v-host" your  server's hostname i.e. HYPERV-GUEST) 
+   - launch Powershell as admin and run each of the following: 
    - `Enable-PSRemoting` (safe to ignore Firewall errors)
-   - `Set-Item WSMan:\localhost\Client\TrustedHosts -Value "fqdn-of-hyper-v-host"`
-   - `Enable-WSManCredSSP -Role client -DelegateComputer "fqdn-of-hyper-v-host"`
+   - `Set-Item WSMan:\localhost\Client\TrustedHosts -Value "HYPERV-GUEST"`
+   - `Enable-WSManCredSSP -Role client -DelegateComputer "HYPERV-GUEST"`
 ### Connect to Server
  - Launch **Hyper-V manager** (make sure you're logged in to the account that matches the server)
  - Select or right click "Hyper-V Manager">Action>**Connect to Server**
