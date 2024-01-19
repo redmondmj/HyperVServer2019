@@ -4,7 +4,7 @@
 
 **Create account on the Guest Hyper-V Server that matches your Host server (in this case it is technically the client machine)!!**
 
-A succesffuly connection requires you to configure both your **Server (HYPERV-GUEST - Server 2019 Guest)** and the **Client (Host Machine - Azure Labs)**. The steps for each are outlined below.
+A succesfful connection requires you to configure both your **Server (HYPERV-GUEST - Server 2019 Guest)** and the **Client (Host Machine - Azure Labs)**. The steps for each are outlined below.
 
 ### Hyper-V Server 2019 (HYPERV-GUEST):
 

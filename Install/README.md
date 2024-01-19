@@ -52,7 +52,7 @@ The "Host Server" will also serve as your management console machine (aka tech m
    1. Create a new administrative user with the same usename and password as your host machine i.e. itstudent
    2. Set the hostname, something simple but descriptive like `HYPERV-GUEST`
    3. Enable Ping replies.
-   4. Enable REmote Desktop.
+   4. Enable Remote Desktop.
    5. Set a static IPv4 address of 192.168.1.100, mask 255.255.255.0, no gateway.
    6. Test pinging your Guest HyeperV server from the host server.
 
