@@ -8,7 +8,6 @@ A succesfful connection requires you to configure both your **Server (HYPERV-GUE
 
 ### Hyper-V Server 2019 (HYPERV-GUEST):
 
-Set the server's hostname
 - Launch Powershell via cmd.exe
   - `powershell -Command "Start-Process PowerShell -Verb RunAs"`
 - Allow remote access on public/private zones, enable firewall rules for CredSSP and WinRM:
@@ -17,11 +16,8 @@ Set the server's hostname
 
 ### Host Machine - Azure Labs (Host):
 
-- If not already installed, Install HyperV Manager using Powershell:
-win+x>Programs And Features>Turn Windows Features On or Off>Hyper-V>Hyper-V Management Tools
-  - Or via Powershell `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All`
 - Add your Hyper-V server to the hosts file via Powershell as admin (replace IP and Hostname!)
-  - ```Add-Content -Path C:\Windows\System32\drivers\etc\hosts -Value "`n1.1.1.1 HOST-NAME"```
+  - `Add-Content -Path C:\Windows\System32\drivers\etc\hosts -Value "n192.168.1.100 HYPERV-GUEST"`
   - OR via notepad.exe as admin
   - edit `C:\Windows\System32\drivers\etc\hosts`  (note it has no extension so make sure you view all file types)
   - Add your server IP and hostname to the bottom of the file:
