@@ -55,5 +55,7 @@ The "Host Server" will also serve as your management console machine (aka tech m
    4. Enable Remote Desktop.
    5. Set a static IPv4 address of 192.168.1.100, mask 255.255.255.0, no gateway.
    6. Test pinging your Guest HyeperV server from the host server.
+   7. Restart your server to apply the new hostname
+   8. Log in with itstudent
 
 

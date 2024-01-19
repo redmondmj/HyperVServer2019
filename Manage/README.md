@@ -17,7 +17,7 @@ A succesfful connection requires you to configure both your **Server (HYPERV-GUE
 ### Host Machine - Azure Labs (Host):
 
 - Add your Hyper-V server to the hosts file via Powershell as admin (replace IP and Hostname!)
-  - `Add-Content -Path C:\Windows\System32\drivers\etc\hosts -Value "n192.168.1.100 HYPERV-GUEST"`
+  - `Add-Content -Path C:\Windows\System32\drivers\etc\hosts -Value "192.168.1.100 HYPERV-GUEST"`
   - OR edit manually via notepad.exe as admin
     - launch notepad.exe as administrator
     - edit `C:\Windows\System32\drivers\etc\hosts`  (note it has no extension so make sure you view all file types)
