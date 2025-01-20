@@ -10,7 +10,7 @@ The "Host Server" will also serve as your management console machine (aka tech m
 ## Host Machine Prep
  - We'll most likely use an Azure Labs VM as our host machine, but this process would work on any machine with:
     - HyperV
-    - 8Gb Ram
+    - 16Gb Ram
     - 40Gb Storage
  - Install HyperV and HyperV Manager
    - Use Server Manager to "Add Role"
